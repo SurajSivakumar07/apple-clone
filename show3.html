@@ -1,0 +1,1015 @@
+<!DOCTYPE html>
+<!--[if lt IE 9]> <html class="no-js ie lt-ie9" lang="en-us"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en-us"> <!--<![endif]-->
+	<head><meta charset="UTF-8"><script>if(navigator.userAgent.match(/MSIE|Internet Explorer/i)||navigator.userAgent.match(/Trident\/7\..*?rv:11/i)){var href=document.location.href;if(!href.match(/[?&]nowprocket/)){if(href.indexOf("?")==-1){if(href.indexOf("#")==-1){document.location.href=href+"?nowprocket=1"}else{document.location.href=href.replace("#","?nowprocket=1#")}}else{if(href.indexOf("#")==-1){document.location.href=href+"&nowprocket=1"}else{document.location.href=href.replace("#","&nowprocket=1#")}}}}</script><script>class RocketLazyLoadScripts{constructor(){this.triggerEvents=["keydown","mousedown","mousemove","touchmove","touchstart","touchend","wheel"],this.userEventHandler=this._triggerListener.bind(this),this.touchStartHandler=this._onTouchStart.bind(this),this.touchMoveHandler=this._onTouchMove.bind(this),this.touchEndHandler=this._onTouchEnd.bind(this),this.clickHandler=this._onClick.bind(this),this.interceptedClicks=[],window.addEventListener("pageshow",(e=>{this.persisted=e.persisted})),window.addEventListener("DOMContentLoaded",(()=>{this._preconnect3rdParties()})),this.delayedScripts={normal:[],async:[],defer:[]},this.allJQueries=[]}_addUserInteractionListener(e){document.hidden?e._triggerListener():(this.triggerEvents.forEach((t=>window.addEventListener(t,e.userEventHandler,{passive:!0}))),window.addEventListener("touchstart",e.touchStartHandler,{passive:!0}),window.addEventListener("mousedown",e.touchStartHandler),document.addEventListener("visibilitychange",e.userEventHandler))}_removeUserInteractionListener(){this.triggerEvents.forEach((e=>window.removeEventListener(e,this.userEventHandler,{passive:!0}))),document.removeEventListener("visibilitychange",this.userEventHandler)}_onTouchStart(e){"HTML"!==e.target.tagName&&(window.addEventListener("touchend",this.touchEndHandler),window.addEventListener("mouseup",this.touchEndHandler),window.addEventListener("touchmove",this.touchMoveHandler,{passive:!0}),window.addEventListener("mousemove",this.touchMoveHandler),e.target.addEventListener("click",this.clickHandler),this._renameDOMAttribute(e.target,"onclick","rocket-onclick"))}_onTouchMove(e){window.removeEventListener("touchend",this.touchEndHandler),window.removeEventListener("mouseup",this.touchEndHandler),window.removeEventListener("touchmove",this.touchMoveHandler,{passive:!0}),window.removeEventListener("mousemove",this.touchMoveHandler),e.target.removeEventListener("click",this.clickHandler),this._renameDOMAttribute(e.target,"rocket-onclick","onclick")}_onTouchEnd(e){window.removeEventListener("touchend",this.touchEndHandler),window.removeEventListener("mouseup",this.touchEndHandler),window.removeEventListener("touchmove",this.touchMoveHandler,{passive:!0}),window.removeEventListener("mousemove",this.touchMoveHandler)}_onClick(e){e.target.removeEventListener("click",this.clickHandler),this._renameDOMAttribute(e.target,"rocket-onclick","onclick"),this.interceptedClicks.push(e),e.preventDefault(),e.stopPropagation(),e.stopImmediatePropagation()}_replayClicks(){window.removeEventListener("touchstart",this.touchStartHandler,{passive:!0}),window.removeEventListener("mousedown",this.touchStartHandler),this.interceptedClicks.forEach((e=>{e.target.dispatchEvent(new MouseEvent("click",{view:e.view,bubbles:!0,cancelable:!0}))}))}_renameDOMAttribute(e,t,n){e.hasAttribute&&e.hasAttribute(t)&&(event.target.setAttribute(n,event.target.getAttribute(t)),event.target.removeAttribute(t))}_triggerListener(){this._removeUserInteractionListener(this),"loading"===document.readyState?document.addEventListener("DOMContentLoaded",this._loadEverythingNow.bind(this)):this._loadEverythingNow()}_preconnect3rdParties(){let e=[];document.querySelectorAll("script[type=rocketlazyloadscript]").forEach((t=>{if(t.hasAttribute("src")){const n=new URL(t.src).origin;n!==location.origin&&e.push({src:n,crossOrigin:t.crossOrigin||"module"===t.getAttribute("data-rocket-type")})}})),e=[...new Map(e.map((e=>[JSON.stringify(e),e]))).values()],this._batchInjectResourceHints(e,"preconnect")}async _loadEverythingNow(){this.lastBreath=Date.now(),this._delayEventListeners(),this._delayJQueryReady(this),this._handleDocumentWrite(),this._registerAllDelayedScripts(),this._preloadAllScripts(),await this._loadScriptsFromList(this.delayedScripts.normal),await this._loadScriptsFromList(this.delayedScripts.defer),await this._loadScriptsFromList(this.delayedScripts.async);try{await this._triggerDOMContentLoaded(),await this._triggerWindowLoad()}catch(e){}window.dispatchEvent(new Event("rocket-allScriptsLoaded")),this._replayClicks()}_registerAllDelayedScripts(){document.querySelectorAll("script[type=rocketlazyloadscript]").forEach((e=>{e.hasAttribute("src")?e.hasAttribute("async")&&!1!==e.async?this.delayedScripts.async.push(e):e.hasAttribute("defer")&&!1!==e.defer||"module"===e.getAttribute("data-rocket-type")?this.delayedScripts.defer.push(e):this.delayedScripts.normal.push(e):this.delayedScripts.normal.push(e)}))}async _transformScript(e){return await this._littleBreath(),new Promise((t=>{const n=document.createElement("script");[...e.attributes].forEach((e=>{let t=e.nodeName;"type"!==t&&("data-rocket-type"===t&&(t="type"),n.setAttribute(t,e.nodeValue))})),e.hasAttribute("src")?(n.addEventListener("load",t),n.addEventListener("error",t)):(n.text=e.text,t());try{e.parentNode.replaceChild(n,e)}catch(e){t()}}))}async _loadScriptsFromList(e){const t=e.shift();return t?(await this._transformScript(t),this._loadScriptsFromList(e)):Promise.resolve()}_preloadAllScripts(){this._batchInjectResourceHints([...this.delayedScripts.normal,...this.delayedScripts.defer,...this.delayedScripts.async],"preload")}_batchInjectResourceHints(e,t){var n=document.createDocumentFragment();e.forEach((e=>{if(e.src){const i=document.createElement("link");i.href=e.src,i.rel=t,"preconnect"!==t&&(i.as="script"),e.getAttribute&&"module"===e.getAttribute("data-rocket-type")&&(i.crossOrigin=!0),e.crossOrigin&&(i.crossOrigin=e.crossOrigin),n.appendChild(i)}})),document.head.appendChild(n)}_delayEventListeners(){let e={};function t(t,n){!function(t){function n(n){return e[t].eventsToRewrite.indexOf(n)>=0?"rocket-"+n:n}e[t]||(e[t]={originalFunctions:{add:t.addEventListener,remove:t.removeEventListener},eventsToRewrite:[]},t.addEventListener=function(){arguments[0]=n(arguments[0]),e[t].originalFunctions.add.apply(t,arguments)},t.removeEventListener=function(){arguments[0]=n(arguments[0]),e[t].originalFunctions.remove.apply(t,arguments)})}(t),e[t].eventsToRewrite.push(n)}function n(e,t){let n=e[t];Object.defineProperty(e,t,{get:()=>n||function(){},set(i){e["rocket"+t]=n=i}})}t(document,"DOMContentLoaded"),t(window,"DOMContentLoaded"),t(window,"load"),t(window,"pageshow"),t(document,"readystatechange"),n(document,"onreadystatechange"),n(window,"onload"),n(window,"onpageshow")}_delayJQueryReady(e){let t=window.jQuery;Object.defineProperty(window,"jQuery",{get:()=>t,set(n){if(n&&n.fn&&!e.allJQueries.includes(n)){n.fn.ready=n.fn.init.prototype.ready=function(t){e.domReadyFired?t.bind(document)(n):document.addEventListener("rocket-DOMContentLoaded",(()=>t.bind(document)(n)))};const t=n.fn.on;n.fn.on=n.fn.init.prototype.on=function(){if(this[0]===window){function e(e){return e.split(" ").map((e=>"load"===e||0===e.indexOf("load.")?"rocket-jquery-load":e)).join(" ")}"string"==typeof arguments[0]||arguments[0]instanceof String?arguments[0]=e(arguments[0]):"object"==typeof arguments[0]&&Object.keys(arguments[0]).forEach((t=>{delete Object.assign(arguments[0],{[e(t)]:arguments[0][t]})[t]}))}return t.apply(this,arguments),this},e.allJQueries.push(n)}t=n}})}async _triggerDOMContentLoaded(){this.domReadyFired=!0,await this._littleBreath(),document.dispatchEvent(new Event("rocket-DOMContentLoaded")),await this._littleBreath(),window.dispatchEvent(new Event("rocket-DOMContentLoaded")),await this._littleBreath(),document.dispatchEvent(new Event("rocket-readystatechange")),await this._littleBreath(),document.rocketonreadystatechange&&document.rocketonreadystatechange()}async _triggerWindowLoad(){await this._littleBreath(),window.dispatchEvent(new Event("rocket-load")),await this._littleBreath(),window.rocketonload&&window.rocketonload(),await this._littleBreath(),this.allJQueries.forEach((e=>e(window).trigger("rocket-jquery-load"))),await this._littleBreath();const e=new Event("rocket-pageshow");e.persisted=this.persisted,window.dispatchEvent(e),await this._littleBreath(),window.rocketonpageshow&&window.rocketonpageshow({persisted:this.persisted})}_handleDocumentWrite(){const e=new Map;document.write=document.writeln=function(t){const n=document.currentScript,i=document.createRange(),r=n.parentElement;let o=e.get(n);void 0===o&&(o=n.nextSibling,e.set(n,o));const s=document.createDocumentFragment();i.setStart(s,0),s.appendChild(i.createContextualFragment(t)),r.insertBefore(s,o)}}async _littleBreath(){Date.now()-this.lastBreath>45&&(await this._requestAnimFrame(),this.lastBreath=Date.now())}async _requestAnimFrame(){return document.hidden?new Promise((e=>setTimeout(e))):new Promise((e=>requestAnimationFrame(e)))}static run(){const e=new RocketLazyLoadScripts;e._addUserInteractionListener(e)}}RocketLazyLoadScripts.run();</script>
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+		<meta name="referrer" content="origin">
+		<title>How to watch Louis Armstrong’s Black and Blues from anywhere</title><link rel="preload" as="style" href="https://fonts.googleapis.com/css?family=Work%20Sans%3A400%2C700&#038;display=swap" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Work%20Sans%3A400%2C700&#038;display=swap" media="print" onload="this.media='all'" /><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Work%20Sans%3A400%2C700&#038;display=swap" /></noscript>
+		<link rel="profile" href="http://gmpg.org/xfn/11">
+		<link rel="pingback" href="https://www.streamingdigitally.com/xmlrpc.php">
+		<meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+<link rel="alternate" hreflang="en-us" href="https://www.streamingdigitally.com/watch-louis-armstrong-s-black-and-blues-documentary/" />
+<link rel="alternate" hreflang="en-au" href="https://www.streamingdigitally.com/au/watch-louis-armstrong-s-black-and-blues-documentary/" />
+<link rel="alternate" hreflang="en-ca" href="https://www.streamingdigitally.com/ca/watch-louis-armstrong-s-black-and-blues-documentary/" />
+<link rel="alternate" hreflang="en-gb" href="https://www.streamingdigitally.com/uk/watch-louis-armstrong-s-black-and-blues-documentary/" />
+<link rel="alternate" hreflang="en-nz" href="https://www.streamingdigitally.com/nz/watch-louis-armstrong-s-black-and-blues-documentary/" />
+<link rel="alternate" hreflang="en-cn" href="https://www.streamingdigitally.com/en-cn/watch-louis-armstrong-s-black-and-blues-documentary/" />
+<link rel="alternate" hreflang="en-fr" href="https://www.streamingdigitally.com/en-fr/watch-louis-armstrong-s-black-and-blues-documentary/" />
+<link rel="alternate" hreflang="en-de" href="https://www.streamingdigitally.com/en-de/watch-louis-armstrong-s-black-and-blues-documentary/" />
+<link rel="alternate" hreflang="en-ie" href="https://www.streamingdigitally.com/en-ir/watch-louis-armstrong-s-black-and-blues-documentary/" />
+<link rel="alternate" hreflang="en-jp" href="https://www.streamingdigitally.com/en-jp/watch-louis-armstrong-s-black-and-blues-documentary/" />
+<link rel="alternate" hreflang="en-kr" href="https://www.streamingdigitally.com/en-kr/watch-louis-armstrong-s-black-and-blues-documentary/" />
+<link rel="alternate" hreflang="en-nl" href="https://www.streamingdigitally.com/en-nl/watch-louis-armstrong-s-black-and-blues-documentary/" />
+<link rel="alternate" hreflang="en-ph" href="https://www.streamingdigitally.com/en-ph/watch-louis-armstrong-s-black-and-blues-documentary/" />
+<link rel="alternate" hreflang="en-sg" href="https://www.streamingdigitally.com/en-sg/watch-louis-armstrong-s-black-and-blues-documentary/" />
+<link rel="alternate" hreflang="en-se" href="https://www.streamingdigitally.com/en-se/watch-louis-armstrong-s-black-and-blues-documentary/" />
+<link rel="alternate" hreflang="en-br" href="https://www.streamingdigitally.com/en-br/watch-louis-armstrong-s-black-and-blues-documentary/" />
+<link rel="alternate" hreflang="en-my" href="https://www.streamingdigitally.com/en-my/watch-louis-armstrong-s-black-and-blues-documentary/" />
+<link rel="alternate" hreflang="en-za" href="https://www.streamingdigitally.com/en-za/watch-louis-armstrong-s-black-and-blues-documentary/" />
+<link rel="alternate" hreflang="en-tr" href="https://www.streamingdigitally.com/en-tr/watch-louis-armstrong-s-black-and-blues-documentary/" />
+<link rel="alternate" hreflang="en-ru" href="https://www.streamingdigitally.com/en-ru/watch-louis-armstrong-s-black-and-blues-documentary/" />
+<link rel="alternate" hreflang="en-in" href="https://www.streamingdigitally.com/en-in/watch-louis-armstrong-s-black-and-blues-documentary/" />
+<link rel="alternate" hreflang="x-default" href="https://www.streamingdigitally.com/watch-louis-armstrong-s-black-and-blues-documentary/" />
+
+<!-- Google Tag Manager for WordPress by gtm4wp.com -->
+<script data-cfasync="false" data-pagespeed-no-defer>
+	var gtm4wp_datalayer_name = "dataLayer";
+	var dataLayer = dataLayer || [];
+</script>
+<!-- End Google Tag Manager for WordPress by gtm4wp.com -->
+	<!-- This site is optimized with the Yoast SEO plugin v19.9 - https://yoast.com/wordpress/plugins/seo/ -->
+	<meta name="description" content="Documentary ‘Louis Armstrong’s Black and Blues’ is coming to Apple TV+, which is not accessible outside the US. But you can watch it on Apple TV+ from outside the US using this guide." />
+	<link rel="canonical" href="https://www.streamingdigitally.com/watch-louis-armstrong-s-black-and-blues-documentary/" />
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="How to watch Louis Armstrong’s Black and Blues from anywhere" />
+	<meta property="og:description" content="Documentary ‘Louis Armstrong’s Black and Blues’ is coming to Apple TV+, which is not accessible outside the US. But you can watch it on Apple TV+ from outside the US using this guide." />
+	<meta property="og:url" content="https://www.streamingdigitally.com/watch-louis-armstrong-s-black-and-blues-documentary/" />
+	<meta property="og:site_name" content="Streaming Digitally" />
+	<meta property="article:publisher" content="https://www.facebook.com/streamingdigitally/" />
+	<meta property="article:published_time" content="2022-10-28T13:41:08+00:00" />
+	<meta property="article:modified_time" content="2022-10-28T18:38:36+00:00" />
+	<meta property="og:image" content="https://www.streamingdigitally.com/wp-content/uploads/2022/10/Apple_TV_Louis_Armstrongs_Black_Blues_key_art_16_9-scaled.webp" />
+	<meta property="og:image:width" content="2560" />
+	<meta property="og:image:height" content="1440" />
+	<meta property="og:image:type" content="image/webp" />
+	<meta name="author" content="Rida Aslam" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:creator" content="@StreamDigitall" />
+	<meta name="twitter:site" content="@StreamDigitall" />
+	<meta name="twitter:label1" content="Written by" />
+	<meta name="twitter:data1" content="Rida Aslam" />
+	<meta name="twitter:label2" content="Est. reading time" />
+	<meta name="twitter:data2" content="8 minutes" />
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"Article","@id":"https://www.streamingdigitally.com/watch-louis-armstrong-s-black-and-blues-documentary/#article","isPartOf":{"@id":"https://www.streamingdigitally.com/watch-louis-armstrong-s-black-and-blues-documentary/"},"author":{"name":"Rida Aslam","@id":"https://www.streamingdigitally.com/#/schema/person/8c1ad23c3b0fa1e45052dff978148065"},"headline":"Watch &#8216;Louis Armstrong&rsquo;s Black and Blues&#8217; from anywhere: Release date, cast, trailer and more","datePublished":"2022-10-28T13:41:08+00:00","dateModified":"2022-10-28T18:38:36+00:00","mainEntityOfPage":{"@id":"https://www.streamingdigitally.com/watch-louis-armstrong-s-black-and-blues-documentary/"},"wordCount":1678,"commentCount":0,"publisher":{"@id":"https://www.streamingdigitally.com/#organization"},"image":{"@id":"https://www.streamingdigitally.com/watch-louis-armstrong-s-black-and-blues-documentary/#primaryimage"},"thumbnailUrl":"https://www.streamingdigitally.com/wp-content/uploads/2022/10/Apple_TV_Louis_Armstrongs_Black_Blues_key_art_16_9-scaled.webp","articleSection":["Apple TV","Documentary film"],"inLanguage":"en-us","potentialAction":[{"@type":"CommentAction","name":"Comment","target":["https://www.streamingdigitally.com/watch-louis-armstrong-s-black-and-blues-documentary/#respond"]}]},{"@type":"WebPage","@id":"https://www.streamingdigitally.com/watch-louis-armstrong-s-black-and-blues-documentary/","url":"https://www.streamingdigitally.com/watch-louis-armstrong-s-black-and-blues-documentary/","name":"How to watch Louis Armstrong’s Black and Blues from anywhere","isPartOf":{"@id":"https://www.streamingdigitally.com/#website"},"primaryImageOfPage":{"@id":"https://www.streamingdigitally.com/watch-louis-armstrong-s-black-and-blues-documentary/#primaryimage"},"image":{"@id":"https://www.streamingdigitally.com/watch-louis-armstrong-s-black-and-blues-documentary/#primaryimage"},"thumbnailUrl":"https://www.streamingdigitally.com/wp-content/uploads/2022/10/Apple_TV_Louis_Armstrongs_Black_Blues_key_art_16_9-scaled.webp","datePublished":"2022-10-28T13:41:08+00:00","dateModified":"2022-10-28T18:38:36+00:00","description":"Documentary ‘Louis Armstrong’s Black and Blues’ is coming to Apple TV+, which is not accessible outside the US. But you can watch it on Apple TV+ from outside the US using this guide.","breadcrumb":{"@id":"https://www.streamingdigitally.com/watch-louis-armstrong-s-black-and-blues-documentary/#breadcrumb"},"inLanguage":"en-us","potentialAction":[{"@type":"ReadAction","target":["https://www.streamingdigitally.com/watch-louis-armstrong-s-black-and-blues-documentary/"]}]},{"@type":"ImageObject","inLanguage":"en-us","@id":"https://www.streamingdigitally.com/watch-louis-armstrong-s-black-and-blues-documentary/#primaryimage","url":"https://www.streamingdigitally.com/wp-content/uploads/2022/10/Apple_TV_Louis_Armstrongs_Black_Blues_key_art_16_9-scaled.webp","contentUrl":"https://www.streamingdigitally.com/wp-content/uploads/2022/10/Apple_TV_Louis_Armstrongs_Black_Blues_key_art_16_9-scaled.webp","width":2560,"height":1440,"caption":"Poster of Louis Armstrong's Black and Blues"},{"@type":"BreadcrumbList","@id":"https://www.streamingdigitally.com/watch-louis-armstrong-s-black-and-blues-documentary/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.streamingdigitally.com/"},{"@type":"ListItem","position":2,"name":"Watch &#8216;Louis Armstrong&rsquo;s Black and Blues&#8217; from anywhere: Release date, cast, trailer and more"}]},{"@type":"WebSite","@id":"https://www.streamingdigitally.com/#website","url":"https://www.streamingdigitally.com/","name":"Streaming Digitally","description":"Streaming Digitally is a one place stop for all the information about movies, TV shows, and animes online.","publisher":{"@id":"https://www.streamingdigitally.com/#organization"},"potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://www.streamingdigitally.com/?s={search_term_string}"},"query-input":"required name=search_term_string"}],"inLanguage":"en-us"},{"@type":"Organization","@id":"https://www.streamingdigitally.com/#organization","name":"Streaming Digitally","url":"https://www.streamingdigitally.com/","logo":{"@type":"ImageObject","inLanguage":"en-us","@id":"https://www.streamingdigitally.com/#/schema/logo/image/","url":"https://www.streamingdigitally.com/wp-content/uploads/2022/03/sb-logo-text.png","contentUrl":"https://www.streamingdigitally.com/wp-content/uploads/2022/03/sb-logo-text.png","width":289,"height":89,"caption":"Streaming Digitally"},"image":{"@id":"https://www.streamingdigitally.com/#/schema/logo/image/"},"sameAs":["https://www.linkedin.com/company/streaming-digitally","https://www.facebook.com/streamingdigitally/","https://twitter.com/StreamDigitall"]},{"@type":"Person","@id":"https://www.streamingdigitally.com/#/schema/person/8c1ad23c3b0fa1e45052dff978148065","name":"Rida Aslam","image":{"@type":"ImageObject","inLanguage":"en-us","@id":"https://www.streamingdigitally.com/#/schema/person/image/","url":"https://secure.gravatar.com/avatar/6663b1f3c2a3b7c5515887ddb7400431?s=96&d=mm&r=g","contentUrl":"https://secure.gravatar.com/avatar/6663b1f3c2a3b7c5515887ddb7400431?s=96&d=mm&r=g","caption":"Rida Aslam"},"url":"https://www.streamingdigitally.com/author/rida-aslam/"}]}</script>
+	<!-- / Yoast SEO plugin. -->
+
+
+<link rel='dns-prefetch' href='//static.addtoany.com' />
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link href='https://fonts.gstatic.com' crossorigin rel='preconnect' />
+<link rel="alternate" type="application/rss+xml" title="Streaming Digitally &raquo; Feed" href="https://www.streamingdigitally.com/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Streaming Digitally &raquo; Comments Feed" href="https://www.streamingdigitally.com/comments/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Streaming Digitally &raquo; Watch &#8216;Louis Armstrong&rsquo;s Black and Blues&#8217; from anywhere: Release date, cast, trailer and more Comments Feed" href="https://www.streamingdigitally.com/watch-louis-armstrong-s-black-and-blues-documentary/feed/" />
+<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 0.07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='wp-block-library-css'  href='https://www.streamingdigitally.com/wp-includes/css/dist/block-library/style.min.css?ver=6.0.3' type='text/css' media='all' />
+<style id='global-styles-inline-css' type='text/css'>
+body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--duotone--dark-grayscale: url('#wp-duotone-dark-grayscale');--wp--preset--duotone--grayscale: url('#wp-duotone-grayscale');--wp--preset--duotone--purple-yellow: url('#wp-duotone-purple-yellow');--wp--preset--duotone--blue-red: url('#wp-duotone-blue-red');--wp--preset--duotone--midnight: url('#wp-duotone-midnight');--wp--preset--duotone--magenta-yellow: url('#wp-duotone-magenta-yellow');--wp--preset--duotone--purple-green: url('#wp-duotone-purple-green');--wp--preset--duotone--blue-orange: url('#wp-duotone-blue-orange');--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+</style>
+<link data-minify="1" rel='stylesheet' id='contact-form-7-css'  href='https://www.streamingdigitally.com/wp-content/cache/min/1/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=1667207041' type='text/css' media='all' />
+<link rel='stylesheet' id='YSFA-css'  href='https://www.streamingdigitally.com/wp-content/plugins/faq-schema-block-to-accordion/assets/css/style.min.css?ver=1.0.4' type='text/css' media='all' />
+<style id='dominant-color-styles-inline-css' type='text/css'>
+img[data-dominant-color]:not(.has-transparency) { background-color: var(--dominant-color); background-clip: content-box, padding-box; }
+</style>
+<link data-minify="1" rel='stylesheet' id='wpcf-swiper-css'  href='https://www.streamingdigitally.com/wp-content/cache/min/1/wp-content/plugins/wp-carousel-free/public/css/swiper-bundle.min.css?ver=1667207041' type='text/css' media='all' />
+<link data-minify="1" rel='stylesheet' id='wp-carousel-free-fontawesome-css'  href='https://www.streamingdigitally.com/wp-content/cache/min/1/wp-content/plugins/wp-carousel-free/public/css/font-awesome.min.css?ver=1667207041' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-carousel-free-css'  href='https://www.streamingdigitally.com/wp-content/plugins/wp-carousel-free/public/css/wp-carousel-free-public.min.css?ver=2.5.0' type='text/css' media='all' />
+<style id='wp-carousel-free-inline-css' type='text/css'>
+#sp-wp-carousel-free-id-288067.sp-wpcp-288067 .wpcp-single-item {
+		border: 1px solid #dddddd;
+	}
+	#sp-wp-carousel-free-id-288067.sp-wpcp-288067 .swiper-button-prev,
+	#sp-wp-carousel-free-id-288067.sp-wpcp-288067 .swiper-button-next,
+	#sp-wp-carousel-free-id-288067.sp-wpcp-288067 .swiper-button-prev:hover,
+	#sp-wp-carousel-free-id-288067.sp-wpcp-288067 .swiper-button-next:hover {
+		background: none;
+		border: none;
+		font-size: 30px;
+	}
+	#sp-wp-carousel-free-id-288067.sp-wpcp-288067 .swiper-button-prev i,
+	#sp-wp-carousel-free-id-288067.sp-wpcp-288067 .swiper-button-next i {
+		color: #aaa;
+	}
+	#sp-wp-carousel-free-id-288067.sp-wpcp-288067 .swiper-button-prev i:hover,
+	#sp-wp-carousel-free-id-288067.sp-wpcp-288067 .swiper-button-next i:hover {
+		color: #178087;
+	}
+	#sp-wp-carousel-free-id-288067.sp-wpcp-288067 .wpcp-swiper-dots .swiper-pagination-bullet {
+		background-color: #cccccc;
+	}
+	#sp-wp-carousel-free-id-288067.sp-wpcp-288067 .wpcp-swiper-dots .swiper-pagination-bullet.swiper-pagination-bullet-active {
+		background-color: #178087;
+	}
+	#sp-wp-carousel-free-id-288067 .wpcpro-row>[class*="wpcpro-col-"] {
+    padding: 0 10px;
+    padding-bottom: 20px;
+}@media (min-width: 480px) { .wpcpro-row .wpcpro-col-sm-1 { flex: 0 0 100%; max-width: 100%; } .wpcpro-row .wpcpro-col-sm-2 { flex: 0 0 50%; max-width: 50%; } .wpcpro-row .wpcpro-col-sm-2-5 { flex: 0 0 75%; max-width: 75%; } .wpcpro-row .wpcpro-col-sm-3 { flex: 0 0 33.333%; max-width: 33.333%; } .wpcpro-row .wpcpro-col-sm-4 { flex: 0 0 25%; max-width: 25%; } .wpcpro-row .wpcpro-col-sm-5 { flex: 0 0 20%; max-width: 20%; } .wpcpro-row .wpcpro-col-sm-6 { flex: 0 0 16.66666666666667%; max-width: 16.66666666666667%; } .wpcpro-row .wpcpro-col-sm-7 { flex: 0 0 14.28571428%; max-width: 14.28571428%; } .wpcpro-row .wpcpro-col-sm-8 { flex: 0 0 12.5%; max-width: 12.5%; } } @media (max-width: 480px) { .wpcpro-row .wpcpro-col-xs-1 { flex: 0 0 100%; max-width: 100%; } .wpcpro-row .wpcpro-col-xs-2 { flex: 0 0 50%; max-width: 50%; } .wpcpro-row .wpcpro-col-xs-3 { flex: 0 0 33.222%; max-width: 33.222%; } .wpcpro-row .wpcpro-col-xs-4 { flex: 0 0 25%; max-width: 25%; } .wpcpro-row .wpcpro-col-xs-5 { flex: 0 0 20%; max-width: 20%; } .wpcpro-row .wpcpro-col-xs-6 { flex: 0 0 16.6667%; max-width: 16.6667%; } .wpcpro-row .wpcpro-col-xs-7 { flex: 0 0 14.28571428%; max-width: 14.28571428%; } .wpcpro-row .wpcpro-col-xs-8 { flex: 0 0 12.5%; max-width: 12.5%; } } @media (min-width: 736px) { .wpcpro-row .wpcpro-col-md-1 { flex: 0 0 100%; max-width: 100%; } .wpcpro-row .wpcpro-col-md-2 { flex: 0 0 50%; max-width: 50%; } .wpcpro-row .wpcpro-col-md-2-5 { flex: 0 0 75%; max-width: 75%; } .wpcpro-row .wpcpro-col-md-3 { flex: 0 0 33.333%; max-width: 33.333%; } .wpcpro-row .wpcpro-col-md-4 { flex: 0 0 25%; max-width: 25%; } .wpcpro-row .wpcpro-col-md-5 { flex: 0 0 20%; max-width: 20%; } .wpcpro-row .wpcpro-col-md-6 { flex: 0 0 16.66666666666667%; max-width: 16.66666666666667%; } .wpcpro-row .wpcpro-col-md-7 { flex: 0 0 14.28571428%; max-width: 14.28571428%; } .wpcpro-row .wpcpro-col-md-8 { flex: 0 0 12.5%; max-width: 12.5%; } } @media (min-width: 980px) { .wpcpro-row .wpcpro-col-lg-1 { flex: 0 0 100%; max-width: 100%; } .wpcpro-row .wpcpro-col-lg-2 { flex: 0 0 50%; max-width: 50%; } .wpcpro-row .wpcpro-col-lg-3 { flex: 0 0 33.222%; max-width: 33.222%; } .wpcpro-row .wpcpro-col-lg-4 { flex: 0 0 25%; max-width: 25%; } .wpcpro-row .wpcpro-col-lg-5 { flex: 0 0 20%; max-width: 20%; } .wpcpro-row .wpcpro-col-lg-6 { flex: 0 0 16.6667%; max-width: 16.6667%; } .wpcpro-row .wpcpro-col-lg-7 { flex: 0 0 14.28571428%; max-width: 14.28571428%; } .wpcpro-row .wpcpro-col-lg-8 { flex: 0 0 12.5%; max-width: 12.5%; } } @media (min-width: 1200px) { .wpcpro-row .wpcpro-col-xl-1 { flex: 0 0 100%; max-width: 100%; } .wpcpro-row .wpcpro-col-xl-2 { flex: 0 0 50%; max-width: 50%; } .wpcpro-row .wpcpro-col-xl-3 { flex: 0 0 33.22222222%; max-width: 33.22222222%; } .wpcpro-row .wpcpro-col-xl-4 { flex: 0 0 25%; max-width: 25%; } .wpcpro-row .wpcpro-col-xl-5 { flex: 0 0 20%; max-width: 20%; } .wpcpro-row .wpcpro-col-xl-6 { flex: 0 0 16.66667%; max-width: 16.66667%; } .wpcpro-row .wpcpro-col-xl-7 { flex: 0 0 14.28571428%; max-width: 14.28571428%; } .wpcpro-row .wpcpro-col-xl-8 { flex: 0 0 12.5%; max-width: 12.5%; } }
+</style>
+<link rel='stylesheet' id='wpml-legacy-dropdown-0-css'  href='//www.streamingdigitally.com/wp-content/plugins/sitepress-multilingual-cms/templates/language-switchers/legacy-dropdown/style.min.css?ver=1' type='text/css' media='all' />
+<link data-minify="1" rel='stylesheet' id='ez-icomoon-css'  href='https://www.streamingdigitally.com/wp-content/cache/min/1/wp-content/plugins/easy-table-of-contents/vendor/icomoon/style.min.css?ver=1667207041' type='text/css' media='all' />
+<link rel='stylesheet' id='ez-toc-css'  href='https://www.streamingdigitally.com/wp-content/plugins/easy-table-of-contents/assets/css/screen.min.css?ver=2.0.34' type='text/css' media='all' />
+<style id='ez-toc-inline-css' type='text/css'>
+div#ez-toc-container p.ez-toc-title {font-size: 120%;}div#ez-toc-container p.ez-toc-title {font-weight: 500;}div#ez-toc-container ul li {font-size: 95%;}div#ez-toc-container nav ul ul li ul li {font-size: 90%!important;}
+.ez-toc-container-direction {
+    direction: ltr;
+}
+
+	.ez-toc-counter ul {
+	    counter-reset: item;
+	}
+
+
+	
+	.ez-toc-counter nav ul li a::before {
+	    content: counters(item, ".", decimal) ". ";
+	    display: inline-block;
+	    counter-increment: item;
+	    margin-right: .2em; 
+
+	    float: left;
+	}
+
+
+.ez-toc-widget-direction {
+    direction: ltr;
+}
+
+	.ez-toc-widget-container ul {
+	    counter-reset: item;
+	}
+
+
+	
+	.ez-toc-widget-container nav ul li a::before {
+	    content: counters(item, ".", decimal) ". ";
+	    display: inline-block;
+	    counter-increment: item;
+	    margin-right: .2em; 
+
+	    float: left;
+	}
+
+
+</style>
+<link data-minify="1" rel='stylesheet' id='dw-gamez-main-css'  href='https://www.streamingdigitally.com/wp-content/cache/min/1/wp-content/themes/dw-gamez/assets/css/dw-gamez.min.css?ver=1667207041' type='text/css' media='all' />
+<link data-minify="1" rel='stylesheet' id='dw-gamez-style-css'  href='https://www.streamingdigitally.com/wp-content/cache/min/1/wp-content/themes/dw-gamez/style.css?ver=1667207041' type='text/css' media='all' />
+<link data-minify="1" rel='stylesheet' id='style-css'  href='https://www.streamingdigitally.com/wp-content/cache/min/1/wp-content/themes/dw-gamez/style.css?ver=1667207041' type='text/css' media='all' />
+
+<link data-minify="1" rel='stylesheet' id='custom_style_css-css'  href='https://www.streamingdigitally.com/wp-content/cache/min/1/wp-content/themes/dw-gamez/assets/css/custom_styles.css?ver=1667207041' type='text/css' media='all' />
+<link data-minify="1" rel='stylesheet' id='tablepress-default-css'  href='https://www.streamingdigitally.com/wp-content/cache/min/1/wp-content/plugins/tablepress/css/default.min.css?ver=1667207041' type='text/css' media='all' />
+<link rel='stylesheet' id='addtoany-css'  href='https://www.streamingdigitally.com/wp-content/plugins/add-to-any/addtoany.min.css?ver=1.16' type='text/css' media='all' />
+<link rel='stylesheet' id='essential-blocks-animation-css'  href='https://www.streamingdigitally.com/wp-content/plugins/accordion-toggle/assets/css/animate.min.css?ver=1.2.5' type='text/css' media='all' />
+<script type='text/javascript' src='https://www.streamingdigitally.com/wp-includes/js/jquery/jquery.min.js?ver=3.6.0' id='jquery-core-js' defer></script>
+<script type='text/javascript' src='https://www.streamingdigitally.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.3.2' id='jquery-migrate-js' defer></script>
+<script type='text/javascript' id='wpml-cookie-js-extra'>
+/* <![CDATA[ */
+var wpml_cookies = {"wp-wpml_current_language":{"value":"en","expires":1,"path":"\/"}};
+var wpml_cookies = {"wp-wpml_current_language":{"value":"en","expires":1,"path":"\/"}};
+/* ]]> */
+</script>
+<script data-minify="1" type='text/javascript' src='https://www.streamingdigitally.com/wp-content/cache/min/1/wp-content/plugins/sitepress-multilingual-cms/res/js/cookies/language-cookie.js?ver=1667207041' id='wpml-cookie-js' defer></script>
+<script type='text/javascript' id='addtoany-core-js-before'>
+window.a2a_config=window.a2a_config||{};a2a_config.callbacks=[];a2a_config.overlays=[];a2a_config.templates={};a2a_localize = {
+	Share: "Share",
+	Save: "Save",
+	Subscribe: "Subscribe",
+	Email: "Email",
+	Bookmark: "Bookmark",
+	ShowAll: "Show all",
+	ShowLess: "Show less",
+	FindServices: "Find service(s)",
+	FindAnyServiceToAddTo: "Instantly find any service to add to",
+	PoweredBy: "Powered by",
+	ShareViaEmail: "Share via email",
+	SubscribeViaEmail: "Subscribe via email",
+	BookmarkInYourBrowser: "Bookmark in your browser",
+	BookmarkInstructions: "Press Ctrl+D or \u2318+D to bookmark this page",
+	AddToYourFavorites: "Add to your favorites",
+	SendFromWebOrProgram: "Send from any email address or email program",
+	EmailProgram: "Email program",
+	More: "More&#8230;",
+	ThanksForSharing: "Thanks for sharing!",
+	ThanksForFollowing: "Thanks for following!"
+};
+
+a2a_config.onclick=1;
+</script>
+<script type="rocketlazyloadscript" data-rocket-type='text/javascript' async src='https://static.addtoany.com/menu/page.js' id='addtoany-core-js'></script>
+<script type='text/javascript' async src='https://www.streamingdigitally.com/wp-content/plugins/add-to-any/addtoany.min.js?ver=1.1' id='addtoany-jquery-js'></script>
+<script type='text/javascript' src='//www.streamingdigitally.com/wp-content/plugins/sitepress-multilingual-cms/templates/language-switchers/legacy-dropdown/script.min.js?ver=1' id='wpml-legacy-dropdown-0-js' defer></script>
+<script type='text/javascript' src='https://www.streamingdigitally.com/wp-content/themes/dw-gamez/assets/js/modernizr.min.js?ver=1.1.1' id='modernizr-js' defer></script>
+<script type='text/javascript' src='https://www.streamingdigitally.com/wp-content/themes/dw-gamez/assets/js/isotope.min.js?ver=1.1.1' id='isotope-js' defer></script>
+<script type='text/javascript' id='dw-gamez-script-js-extra'>
+/* <![CDATA[ */
+var dw = {"ajax_url":"https:\/\/www.streamingdigitally.com\/wp-admin\/admin-ajax.php"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://www.streamingdigitally.com/wp-content/themes/dw-gamez/assets/js/dw-gamez.min.js?ver=1.1.1' id='dw-gamez-script-js' defer></script>
+<link rel="https://api.w.org/" href="https://www.streamingdigitally.com/wp-json/" /><link rel="alternate" type="application/json" href="https://www.streamingdigitally.com/wp-json/wp/v2/posts/308258" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.streamingdigitally.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://www.streamingdigitally.com/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 6.0.3" />
+<link rel='shortlink' href='https://www.streamingdigitally.com/?p=308258' />
+<link rel="alternate" type="application/json+oembed" href="https://www.streamingdigitally.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.streamingdigitally.com%2Fwatch-louis-armstrong-s-black-and-blues-documentary%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://www.streamingdigitally.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.streamingdigitally.com%2Fwatch-louis-armstrong-s-black-and-blues-documentary%2F&#038;format=xml" />
+<meta name="generator" content="WPML ver:4.5.11 stt:68,105,97,84,8,80,95,100,1,98,72,4,3,71,94,96,87,89,74,88,79,81,83,93,73,70,102,75,91,86,76,85,90,77,103,99,82,92,104,54,101;" />
+<meta name="generator" content="Performance Lab 1.6.0; modules: images/dominant-color, images/webp-uploads, site-health/audit-full-page-cache, site-health/webp-support, object-cache/persistent-object-cache-health-check">
+
+<!-- Google Tag Manager for WordPress by gtm4wp.com -->
+<!-- GTM Container placement set to footer -->
+<script data-cfasync="false" data-pagespeed-no-defer>
+	var dataLayer_content = {"visitorIP":"202.69.48.90","pagePostType":"post","pagePostType2":"single-post","pageCategory":["apple-tv","documentary-film"],"pagePostAuthor":"Rida Aslam","browserName":"","browserVersion":"","browserEngineName":"","browserEngineVersion":"","osName":"","osVersion":"","deviceType":"bot","deviceManufacturer":"","deviceModel":""};
+	dataLayer.push( dataLayer_content );
+</script>
+<script type="rocketlazyloadscript" data-cfasync="false">
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.'+'js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-P58HS6Q');
+</script>
+<!-- End Google Tag Manager -->
+<!-- End Google Tag Manager for WordPress by gtm4wp.com --><link rel="shortcut icon" href="https://www.streamingdigitally.com/wp-content/uploads/2020/10/favicon.ico"><style type="text/css" id="custom-background-css"> body.custom-background { background-size: cover }</style><style type="text/css">.broken_link, a.broken_link {
+	text-decoration: line-through;
+}</style><style type="text/css" id="custom-background-css">
+body.custom-background { background-color: #0d0d0d; }
+</style>
+	<link rel="icon" href="https://www.streamingdigitally.com/wp-content/uploads/2020/10/favicon.ico" sizes="32x32" />
+<link rel="icon" href="https://www.streamingdigitally.com/wp-content/uploads/2020/10/favicon.ico" sizes="192x192" />
+<link rel="apple-touch-icon" href="https://www.streamingdigitally.com/wp-content/uploads/2020/10/favicon.ico" />
+<meta name="msapplication-TileImage" content="https://www.streamingdigitally.com/wp-content/uploads/2020/10/favicon.ico" />
+		<style type="text/css" id="wp-custom-css">
+			.icc-group-a-table td:nth-child(2) {
+    width: 25%;
+}
+.icc-group-a-table th.has-text-align-center {
+    width: 5%;
+}
+.icc-group-a-table thead,thead  {
+    background: #f0f2f5;
+}
+
+
+		</style>
+		            
+	</head>
+	
+	<body class="single single-post postid-308258 single-format-standard custom-background">
+		<div id="page" class="hfeed site">
+						<header id="masthead" class="site-header" role="banner">
+					<section id="top-header" class="site-top-header">
+		<div class="container mob-container">
+			<button data-target=".navbar-nav > ul" data-toggle="collapse" type="button" class="top-nav-toggle button-toggle visible-xs collapsed">
+				<i class="fa fa-reorder"></i>
+			</button>
+			
+			<div class="mobile_logo_div"><h2 class="site-title display-logo"><a href="https://www.streamingdigitally.com/" title="Streaming Digitally" rel="home"><img width="120" height="37" alt="Streaming Digitally" src="https://www.streamingdigitally.com/wp-content/themes/dw-gamez/assets/img/sd-mobile-logo-text.png" /></a></h2></div>
+			
+			<button data-target=".top-shares" data-toggle="collapse" type="button" class="top-shares-toggle button-toggle visible-xs collapsed">
+				<i class="fa fa-share-alt"></i>
+			</button>
+			
+			<button data-target=".site-branding .search_form" data-toggle="collapse" type="button" class="search-form-toggle button-toggle visible-xs collapsed">
+				<i class="fa fa-search"></i>
+			</button>
+			<button data-target=".top-nav" data-toggle="collapse" type="button" class="top-shares-toggle button-toggle visible-xs collapsed pull-right">
+				<i class="fa fa-link"></i>
+			</button>
+		</div>
+			<div class="container">
+									<div class="col-12 col-md-12 col-sm-12 col-lg-12 col-xl-12"><ul class="top-shares nav text-right list-unstyled">
+				<li class="social reddit"><a href="https://www.reddit.com/r/moviesocial/"><i class="fa fa-reddit"></i></a></li>				<li class="social facebook"><a href="https://www.facebook.com/streamingdigitally"><i class="fa fa-facebook"></i></a></li>				<li class="social twitter"><a href="https://twitter.com/streamdigital_"><i class="fa fa-twitter"></i></a></li>				<li class="social youtube"><a href="https://www.youtube.com/channel/UCsEX6bS1qwbnLddbr54aOLQ"><i class="fa fa-youtube"></i></a></li>				<li class="social linkedin"><a href="https://www.linkedin.com/company/streaming-digitally"><i class="fa fa-linkedin"></i></a></li>			</ul></div>			
+						</div>
+	</section>
+					<section id="site-branding" class="site-branding">
+					<div class="container">
+						<div class="brand">
+							<h2 class="site-title display-logo"><a href="https://www.streamingdigitally.com/" title="Streaming Digitally" rel="home"><img width="289" height="89" alt="Streaming Digitally" src="https://www.streamingdigitally.com/wp-content/uploads/2022/03/sb-logo-text.png" /></a></h2>						</div>
+						<div class="search_form">
+							<form role="search" method="get" class="search-form" action="https://www.streamingdigitally.com/">
+	<label>
+		<span class="screen-reader-text sr-only">Search for:</span>
+		<input type="search" class="search-field form-control" placeholder="Search &hellip;" value="" name="s" title="Search for:">
+	</label>
+	<input type="submit" class="search-submit" value="Search">
+</form>
+						</div>
+					</div>
+				</section>
+			</header>
+			
+			<nav id="site-navigation" class="main-navigation navbar" role="navigation">
+				<div class="container">
+					<div class="menu nav navbar-nav"><ul id="menu-navigation_menu_new" class=""><li id="menu-item-259921" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-259921"><a href="https://www.streamingdigitally.com/news/">News</a></li>
+<li id="menu-item-259922" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-259922"><a href="https://www.streamingdigitally.com/reviews/">Reviews</a></li>
+<li id="menu-item-259532" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-259532"><a href="https://www.streamingdigitally.com/channel/">What New On</a>
+<ul class="sub-menu">
+	<li id="menu-item-259533" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-259533"><a href="https://www.streamingdigitally.com/watch-hulu-outside-the-us/">Hulu</a></li>
+	<li id="menu-item-259534" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-259534"><a href="https://www.streamingdigitally.com/watch-hbo-max-outside-the-us/">HBO Max</a></li>
+	<li id="menu-item-259535" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-259535"><a href="https://www.streamingdigitally.com/watch-bbc-iplayer-in-usa/">BBC iPlayer</a></li>
+	<li id="menu-item-259536" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-259536"><a href="https://www.streamingdigitally.com/watch-paramount-plus-outside-the-us/">Paramount</a></li>
+	<li id="menu-item-259537" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-259537"><a href="https://www.streamingdigitally.com/watch-peacock-tv-outside-us/">Peacock</a></li>
+	<li id="menu-item-259538" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-259538"><a href="https://www.streamingdigitally.com/watch-disney-plus-outside-the-us/">Disney Plus</a></li>
+	<li id="menu-item-259540" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-259540"><a href="https://www.streamingdigitally.com/watch-disney-plus-hotstar-in-the-usa/">Disney Plus Hotstar</a></li>
+</ul>
+</li>
+<li id="menu-item-259541" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-259541"><a href="https://www.streamingdigitally.com/what-to-watch">What to Watch</a>
+<ul class="sub-menu">
+	<li id="menu-item-259542" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-259542"><a href="https://www.streamingdigitally.com/what-to-watch/movies/">Movies</a></li>
+	<li id="menu-item-259543" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-259543"><a href="https://www.streamingdigitally.com/what-to-watch/tvshows/">Tv Shows</a></li>
+</ul>
+</li>
+<li id="menu-item-266000" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-266000"><a href="https://www.streamingdigitally.com/sports/">Sports</a>
+<ul class="sub-menu">
+	<li id="menu-item-295176" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-295176"><a href="https://www.streamingdigitally.com/cricket/">Cricket</a></li>
+	<li id="menu-item-295178" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-295178"><a href="https://www.streamingdigitally.com/nba/">NBA</a></li>
+	<li id="menu-item-295179" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-295179"><a href="https://www.streamingdigitally.com/nhl/">NHL</a></li>
+	<li id="menu-item-295180" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-295180"><a href="https://www.streamingdigitally.com/nfl/">NFL</a></li>
+	<li id="menu-item-295181" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-295181"><a href="https://www.streamingdigitally.com/football/">Football</a></li>
+	<li id="menu-item-295185" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-295185"><a href="https://www.streamingdigitally.com/fifa-world-cup-2022/">FIFA World Cup 2022</a></li>
+	<li id="menu-item-295183" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-295183"><a href="https://www.streamingdigitally.com/rugby/">RUGBY</a></li>
+</ul>
+</li>
+<li id="menu-item-309212" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-309212"><a>More</a>
+<ul class="sub-menu">
+	<li id="menu-item-259545" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-259545"><a href="https://www.streamingdigitally.com/about-us/">About</a></li>
+	<li id="menu-item-309215" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-privacy-policy menu-item-309215"><a href="https://www.streamingdigitally.com/privacy-policy/">Privacy Policy</a></li>
+	<li id="menu-item-309218" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-309218"><a href="https://www.streamingdigitally.com/write-for-us/">Write For Us</a></li>
+	<li id="menu-item-309217" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-309217"><a href="https://www.streamingdigitally.com/contact-us/">Contact Us</a></li>
+</ul>
+</li>
+<li id="menu-item-309221" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-309221"><a>VPN</a>
+<ul class="sub-menu">
+	<li id="menu-item-309222" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-309222"><a href="#">Best VPN For Streaming</a></li>
+	<li id="menu-item-309223" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-309223"><a href="#">Best VPN For BBC iplayer</a></li>
+	<li id="menu-item-309224" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-309224"><a href="#">Best VPN For Hulu</a></li>
+	<li id="menu-item-309225" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-309225"><a href="#">Best VPN For HBO Max</a></li>
+	<li id="menu-item-309226" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-309226"><a href="#">Best VPN For Paramount</a></li>
+	<li id="menu-item-309227" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-309227"><a href="#">Best VPN For Peacock</a></li>
+	<li id="menu-item-309228" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-309228"><a href="#">Best VPN For Disney Plus</a></li>
+</ul>
+</li>
+</ul></div>				</div>
+			</nav>
+			<main id="site-main" class="site-main">
+				<div class="container">
+<section id="content" class="site-content">
+	<div id="primary">
+		<div id="primary-inner">			
+			<div id="main-content">
+				<div class="row">
+										<div class="col-12 col-md-9 col-lg-9 col-xl-12" style="float:none;margin:0 auto;">
+												
+						<article id="post-308258" class="post-308258 post type-post status-publish format-standard has-post-thumbnail hentry category-apple-tv category-documentary-film">
+	
+	<header class="entry-header">
+		<h1 class="entry-title">Watch &#8216;Louis Armstrong&rsquo;s Black and Blues&#8217; from anywhere: Release date, cast, trailer and more</h1>
+				
+				<div class="entry-meta meta-top">
+			<span class="posted-on"><i class="fa fa-clock-o"></i> <a href="https://www.streamingdigitally.com/watch-louis-armstrong-s-black-and-blues-documentary/" title="1:41 pm" rel="bookmark"><span class="entry-date">October 28, 2022</span></a></span>&nbsp;<span class="byline"><i class="fa fa-user"></i> <span class="author vcard"><a class="url fn n" href="https://www.streamingdigitally.com/author/rida-aslam/" title="View all posts by Rida Aslam">Rida Aslam</a></span></span>		<span class="cat-links">
+			<i class="fa fa-folder-open"></i> <a href="https://www.streamingdigitally.com/apple-tv/" rel="category tag">Apple TV</a>, <a href="https://www.streamingdigitally.com/documentary-film/" rel="category tag">Documentary film</a>		</span>
+			</div>
+			</header>
+
+		<div class="entry-thumbnail">
+		<img width="670" height="377" src="https://www.streamingdigitally.com/wp-content/uploads/2022/10/Apple_TV_Louis_Armstrongs_Black_Blues_key_art_16_9-670x377.webp" class="attachment-homepage-wide size-homepage-wide not-transparent wp-post-image" alt="Poster of Louis Armstrong&#039;s Black and Blues" srcset="https://www.streamingdigitally.com/wp-content/uploads/2022/10/Apple_TV_Louis_Armstrongs_Black_Blues_key_art_16_9-670x377.webp 670w, https://www.streamingdigitally.com/wp-content/uploads/2022/10/Apple_TV_Louis_Armstrongs_Black_Blues_key_art_16_9-300x169.webp 300w, https://www.streamingdigitally.com/wp-content/uploads/2022/10/Apple_TV_Louis_Armstrongs_Black_Blues_key_art_16_9-1024x576.webp 1024w, https://www.streamingdigitally.com/wp-content/uploads/2022/10/Apple_TV_Louis_Armstrongs_Black_Blues_key_art_16_9-150x84.webp 150w, https://www.streamingdigitally.com/wp-content/uploads/2022/10/Apple_TV_Louis_Armstrongs_Black_Blues_key_art_16_9-768x432.webp 768w, https://www.streamingdigitally.com/wp-content/uploads/2022/10/Apple_TV_Louis_Armstrongs_Black_Blues_key_art_16_9-1536x864.webp 1536w, https://www.streamingdigitally.com/wp-content/uploads/2022/10/Apple_TV_Louis_Armstrongs_Black_Blues_key_art_16_9-2048x1152.webp 2048w, https://www.streamingdigitally.com/wp-content/uploads/2022/10/Apple_TV_Louis_Armstrongs_Black_Blues_key_art_16_9-210x118.webp 210w, https://www.streamingdigitally.com/wp-content/uploads/2022/10/Apple_TV_Louis_Armstrongs_Black_Blues_key_art_16_9-889x500.webp 889w, https://www.streamingdigitally.com/wp-content/uploads/2022/10/Apple_TV_Louis_Armstrongs_Black_Blues_key_art_16_9-480x270.webp 480w, https://www.streamingdigitally.com/wp-content/uploads/2022/10/Apple_TV_Louis_Armstrongs_Black_Blues_key_art_16_9-380x214.webp 380w, https://www.streamingdigitally.com/wp-content/uploads/2022/10/Apple_TV_Louis_Armstrongs_Black_Blues_key_art_16_9-231x130.webp 231w, https://www.streamingdigitally.com/wp-content/uploads/2022/10/Apple_TV_Louis_Armstrongs_Black_Blues_key_art_16_9-747x420.webp 747w" sizes="(max-width: 670px) 100vw, 670px" data-has-transparency="false" data-dominant-color="1b5eaf" style="--dominant-color: #1b5eaf;" />	</div>
+	
+	<div class="entry-content">
+				<div id="ez-toc-container" class="ez-toc-v2_0_34 counter-flat ez-toc-counter ez-toc-grey ez-toc-container-direction">
+<div class="ez-toc-title-container">
+<p class="ez-toc-title">Table of Contents</p>
+<span class="ez-toc-title-toggle"><a href="#" class="ez-toc-pull-right ez-toc-btn ez-toc-btn-xs ez-toc-btn-default ez-toc-toggle" style="display: none;"><label for="item" aria-label="Table of Content"><i class="ez-toc-glyphicon ez-toc-icon-toggle"></i></label><input type="checkbox" id="item"></a></span></div>
+<nav><ul class='ez-toc-list ez-toc-list-level-1'><li class='ez-toc-page-1'><a class="ez-toc-link ez-toc-heading-1" href="#Quick_steps_How_to_watch_Louis_Armstrongs_Black_and_Blues_on_Apple_TV_using_a_VPN" title="Quick steps: How to watch ‘Louis Armstrong’s Black and Blues’ on Apple TV+ using a VPN">Quick steps: How to watch ‘Louis Armstrong’s Black and Blues’ on Apple TV+ using a VPN</a></li><li class='ez-toc-page-1'><a class="ez-toc-link ez-toc-heading-2" href="#Why_is_Apple_TV_not_accessible_outside_the_US" title="Why is Apple TV+ not accessible outside the US?">Why is Apple TV+ not accessible outside the US?</a></li><li class='ez-toc-page-1'><a class="ez-toc-link ez-toc-heading-3" href="#What_is_the_release_date_of_Louis_Armstrongs_Black_and_Blues" title="What is the release date of &#8216;Louis Armstrong’s Black and Blues&#8217;?">What is the release date of &#8216;Louis Armstrong’s Black and Blues&#8217;?</a></li><li class='ez-toc-page-1'><a class="ez-toc-link ez-toc-heading-4" href="#Where_to_watch_Louis_Armstrongs_Black_and_Blues_online" title="Where to watch &#8216;Louis Armstrong’s Black and Blues&#8217; online?">Where to watch &#8216;Louis Armstrong’s Black and Blues&#8217; online?</a></li><li class='ez-toc-page-1'><a class="ez-toc-link ez-toc-heading-5" href="#Who_was_Louis_Armstrong" title="Who was Louis Armstrong?">Who was Louis Armstrong?</a></li><li class='ez-toc-page-1'><a class="ez-toc-link ez-toc-heading-6" href="#Did_you_know_Louis_Armstrongs_house_is_now_a_museum" title="Did you know: Louis Armstrong’s house is now a museum">Did you know: Louis Armstrong’s house is now a museum</a></li><li class='ez-toc-page-1'><a class="ez-toc-link ez-toc-heading-7" href="#What_is_Louis_Armstrongs_Black_and_Blues_about" title="What is &#8216;Louis Armstrong’s Black and Blues&#8217; about?">What is &#8216;Louis Armstrong’s Black and Blues&#8217; about?</a></li><li class='ez-toc-page-1'><a class="ez-toc-link ez-toc-heading-8" href="#What_is_the_plot_of_Louis_Armstrongs_Black_and_Blues" title="What is the plot of &#8216;Louis Armstrong’s Black and Blues&#8217;?">What is the plot of &#8216;Louis Armstrong’s Black and Blues&#8217;?</a></li><li class='ez-toc-page-1'><a class="ez-toc-link ez-toc-heading-9" href="#Louis_Armstrongs_Black_and_Blues_official_trailer" title="&#8216;Louis Armstrong’s Black and Blues&#8217; official trailer">&#8216;Louis Armstrong’s Black and Blues&#8217; official trailer</a></li><li class='ez-toc-page-1'><a class="ez-toc-link ez-toc-heading-10" href="#What_is_the_story_behind_the_title_of_the_documentary" title="What is the story behind the title of the documentary?">What is the story behind the title of the documentary?</a></li><li class='ez-toc-page-1'><a class="ez-toc-link ez-toc-heading-11" href="#Whats_the_cast_of_Louis_Armstrongs_Black_and_Blues" title="What&#8217;s the cast of &#8216;Louis Armstrong’s Black and Blues&#8217;?">What&#8217;s the cast of &#8216;Louis Armstrong’s Black and Blues&#8217;?</a></li><li class='ez-toc-page-1'><a class="ez-toc-link ez-toc-heading-12" href="#Sacha_Jenkins_the_man_behind_Louis_Armstrongs_Black_and_Blues" title="Sacha Jenkins, the man behind &#8216;Louis Armstrong’s Black and Blues&#8217;">Sacha Jenkins, the man behind &#8216;Louis Armstrong’s Black and Blues&#8217;</a></li><li class='ez-toc-page-1'><a class="ez-toc-link ez-toc-heading-13" href="#Sacha_Jenkins_on_making_Louis_Armstrongs_Black_and_Blues" title="Sacha Jenkins on making &#8216;Louis Armstrong’s Black and Blues&#8217;">Sacha Jenkins on making &#8216;Louis Armstrong’s Black and Blues&#8217;</a></li><li class='ez-toc-page-1'><a class="ez-toc-link ez-toc-heading-14" href="#What_are_the_reviews_of_Louis_Armstrongs_Black_and_Blues" title="What are the reviews of &#8216;Louis Armstrong’s Black and Blues&#8217;?">What are the reviews of &#8216;Louis Armstrong’s Black and Blues&#8217;?</a></li><li class='ez-toc-page-1'><a class="ez-toc-link ez-toc-heading-15" href="#What_is_the_IMDb_and_Rotten_Tomatoes_rating_for_Louis_Armstrongs_Black_and_Blues" title="What is the IMDb and Rotten Tomatoes rating for &#8216;Louis Armstrong’s Black and Blues&#8217;?">What is the IMDb and Rotten Tomatoes rating for &#8216;Louis Armstrong’s Black and Blues&#8217;?</a></li><li class='ez-toc-page-1'><a class="ez-toc-link ez-toc-heading-16" href="#What_are_the_reactions_and_comments_about_Louis_Armstrongs_Black_and_Blues" title="What are the reactions and comments about &#8216;Louis Armstrong’s Black and Blues&#8217;?">What are the reactions and comments about &#8216;Louis Armstrong’s Black and Blues&#8217;?</a></li><li class='ez-toc-page-1'><a class="ez-toc-link ez-toc-heading-17" href="#What_else_can_I_watch_on_Apple_TV" title="What else can I watch on Apple TV+?">What else can I watch on Apple TV+?</a></li><li class='ez-toc-page-1'><a class="ez-toc-link ez-toc-heading-18" href="#Other_movies_like_Louis_Armstrongs_Black_and_Blues" title="Other movies like &#8216;Louis Armstrong’s Black and Blues&#8217;">Other movies like &#8216;Louis Armstrong’s Black and Blues&#8217;</a></li><li class='ez-toc-page-1'><a class="ez-toc-link ez-toc-heading-19" href="#FAQs" title="FAQs">FAQs</a></li><li class='ez-toc-page-1'><a class="ez-toc-link ez-toc-heading-20" href="#Best_VPNs_to_watch_Louis_Armstrongs_Black_and_Blues_from_anywhere" title="Best VPNs to watch&nbsp;&#8216;Louis Armstrong’s Black and Blues&#8217; from anywhere">Best VPNs to watch&nbsp;&#8216;Louis Armstrong’s Black and Blues&#8217; from anywhere</a></li><li class='ez-toc-page-1'><a class="ez-toc-link ez-toc-heading-21" href="#ExpressVPN" title="ExpressVPN">ExpressVPN</a></li></ul></nav></div>
+
+<p>For jazz lovers, it is almost impossible to not have heard about Louis Armstrong, given the legend’s contributions to the genre. So it is exciting news for music lovers everywhere that <strong><a href="https://www.streamingdigitally.com/watch-apple-tv-from-anywhere/" target="_blank" rel="noreferrer noopener">Apple TV</a></strong>’s <strong><em>Louis Armstrong’s Black and Blues</em></strong> is about to premiere today, <strong>October 28</strong>.</p>
+
+
+
+<p>The artist — best known for songs like &#8220;What a Wonderful World,” “Hello, Dolly,” ”Star Dust” and &#8220;La Vie En Rose,” — has been a favorite across generations and cultures. With remakes and contemporary mixes, even the younger, more recent generations are in awe of Louis Armstrong and remember him fondly. Stay with us as we explore the <em>Louis Armstrong’s Black and Blues</em>, but here are some quick steps to help you watch it from anywhere in the world.</p>
+
+
+
+<h2><span class="ez-toc-section" id="Quick_steps_How_to_watch_Louis_Armstrongs_Black_and_Blues_on_Apple_TV_using_a_VPN"></span>Quick steps: How to watch ‘Louis Armstrong’s Black and Blues’ on Apple TV+ using a VPN<span class="ez-toc-section-end"></span></h2>
+
+
+
+								<div class="content_box_div">
+								<ol>
+								<li>
+								<p>
+								Select a VPN service that is optimized for streaming. We recommend <strong><a href="https://www.streamingdigitally.com/stream/expressvpn" class="cta_1 expressvpn inline_link" target="_blank" style="color:#0065ff;">ExpressVPN</a> </strong>. It has multiple plans you can choose from .
+								</p>
+								</li>
+								<li>
+								<p>
+								<strong>Download</strong> the VPN and connect to a UK server.
+								</p>
+								</li>
+								<li>
+								<p>
+								<strong>Log in</strong> to Apple TV.
+								</p>
+								</li>
+								<li>
+								<p>
+								Find <strong>Louis Armstrong&rsquo;s Black and Blues</strong> and stream it no matter where you are.
+								</p>
+								</li>
+								</ol>
+								<div class="text-center">
+								<div class="wp-block-button">
+								<a class="wp-block-button__link has-vivid-red-background-color has-background cta_box cta_3 expressvpn quick_btn_special" href="https://www.streamingdigitally.com/stream/expressvpn" target="_blank">Stream Louis Armstrong&rsquo;s Black and Blues with ExpressVPN</a>
+								</div>
+								</div>
+								</div>
+
+
+
+<h2><span class="ez-toc-section" id="Why_is_Apple_TV_not_accessible_outside_the_US"></span>Why is Apple TV+ not accessible outside the US?<span class="ez-toc-section-end"></span></h2>
+
+
+
+<p>Many streaming services restrict their content from being accessed by people in countries other than the US, which means that there’s a whole world of entertainment that opens up when you start using a reliable, <strong><a href="https://www.streamingdigitally.com/expressvpn-review/" target="_blank" rel="noreferrer noopener">high-speed VPN service</a></strong>.</p>
+
+
+
+<p>Btw, there’s a nifty <strong><a href="#vpn">comparison of our recommended VPNs</a></strong> at the end of this article.</p>
+
+
+
+<h2><span class="ez-toc-section" id="What_is_the_release_date_of_Louis_Armstrongs_Black_and_Blues"></span>What is the release date of &#8216;Louis Armstrong’s Black and Blues&#8217;?<span class="ez-toc-section-end"></span></h2>
+
+
+
+<p><em>Louis Armstrong’s Black and Blues </em>is coming to <strong>Apple TV+</strong> on <strong>October 28, 2022</strong>.&nbsp;</p>
+
+
+
+<h2><span class="ez-toc-section" id="Where_to_watch_Louis_Armstrongs_Black_and_Blues_online"></span>Where to watch &#8216;Louis Armstrong’s Black and Blues&#8217; online?<span class="ez-toc-section-end"></span></h2>
+
+
+
+<p>Apple TV ensures you watch one of the best shows and films uninterrupted and provides HD, 4k quality to provide the best watching experience. You may tune into Apple TV+ to watch <em>Louis Armstrong’s Black and Blues </em>online.</p>
+
+
+
+<h2><span class="ez-toc-section" id="Who_was_Louis_Armstrong"></span>Who was Louis Armstrong?<span class="ez-toc-section-end"></span></h2>
+
+
+
+<p>Louis Armstrong, (aka Satchmo) is known for bringing about a revolution in the Jazz and Blues genres with his unique and exceptional improvisations on the cornet and trumpet. Many musicians after him widely praise him and are indeed inspired by the likes of Armstrong.&nbsp;</p>
+
+
+
+<p>Born and raised in New Orleans, Louisiana, Louis Armstrong had a turbulent childhood working many odd jobs to sustain a living after being forced out of school by his father in fifth grade. Soon, he was introduced to Joe or King Oliver who mentored Armstrong in gaining command over the cornet.&nbsp;</p>
+
+
+
+<figure class="wp-block-image size-full is-resized"><img data-dominant-color="777777" data-has-transparency="false" style="--dominant-color: #777777;" loading="lazy" src="https://www.streamingdigitally.com/wp-content/uploads/2022/10/louisarmstrong-sblack_blues_still_01-copy.webp" alt="" class="not-transparent wp-image-308295" width="838" height="471" srcset="https://www.streamingdigitally.com/wp-content/uploads/2022/10/louisarmstrong-sblack_blues_still_01-copy.webp 681w, https://www.streamingdigitally.com/wp-content/uploads/2022/10/louisarmstrong-sblack_blues_still_01-copy-300x169.webp 300w, https://www.streamingdigitally.com/wp-content/uploads/2022/10/louisarmstrong-sblack_blues_still_01-copy-150x84.webp 150w, https://www.streamingdigitally.com/wp-content/uploads/2022/10/louisarmstrong-sblack_blues_still_01-copy-670x377.webp 670w, https://www.streamingdigitally.com/wp-content/uploads/2022/10/louisarmstrong-sblack_blues_still_01-copy-210x118.webp 210w, https://www.streamingdigitally.com/wp-content/uploads/2022/10/louisarmstrong-sblack_blues_still_01-copy-480x270.webp 480w, https://www.streamingdigitally.com/wp-content/uploads/2022/10/louisarmstrong-sblack_blues_still_01-copy-380x214.webp 380w, https://www.streamingdigitally.com/wp-content/uploads/2022/10/louisarmstrong-sblack_blues_still_01-copy-231x130.webp 231w" sizes="(max-width: 838px) 100vw, 838px" /></figure>
+
+
+
+<p>After many career breaks and disturbances, some related to his health and some about managerial issues, Louis Armstrong successfully left songs like <em>What a Wonderful World, La Vie En Rose </em>among many others to remember him by.&nbsp;</p>
+
+
+
+<p>His life has left a valuable impact on the African American community considering the many firsts such as “The first African American jazz musician to write an autobiography, <em>Swing That Music</em>.” Other firsts in this regard include being featured in a massive Hollywood film, <em>Pennies from Heaven</em>, as well as becoming the first African American entertainer to host a nationally sponsored radio show.</p>
+
+
+
+<p>What did Louis Armstrong’s nickname, ‘Satchmo’ mean?</p>
+
+
+
+<p>Satchmo was a short for &#8216;satchel mouth&#8217; given Armstrong had a very wide mouth.&nbsp;</p>
+
+
+
+<h3>Books on Louis Armstrong</h3>
+
+
+
+<p>To know more about the beloved Jazz artist, here are some of Louis Armstrong&#8217;s autobiographies:</p>
+
+
+
+<ul><li><em>Swing That Music&nbsp;</em></li><li><em>My Life in New Orleans</em>&nbsp;</li><li><em>Louis Armstrong in His Own Words</em></li></ul>
+
+
+
+<p></p>
+
+
+
+<h2><span class="ez-toc-section" id="Did_you_know_Louis_Armstrongs_house_is_now_a_museum"></span>Did you know: Louis Armstrong’s house is now a museum<span class="ez-toc-section-end"></span></h2>
+
+
+
+<p></p>
+
+
+
+<figure class="wp-block-image size-full"><img data-dominant-color="6c605d" data-has-transparency="false" style="--dominant-color: #6c605d;" loading="lazy" width="1000" height="645" src="https://www.streamingdigitally.com/wp-content/uploads/2022/10/LouisArmstrongHouseMuseum_Photo_Office.webp" alt="" class="not-transparent wp-image-308278" srcset="https://www.streamingdigitally.com/wp-content/uploads/2022/10/LouisArmstrongHouseMuseum_Photo_Office.webp 1000w, https://www.streamingdigitally.com/wp-content/uploads/2022/10/LouisArmstrongHouseMuseum_Photo_Office-300x194.webp 300w, https://www.streamingdigitally.com/wp-content/uploads/2022/10/LouisArmstrongHouseMuseum_Photo_Office-150x97.webp 150w, https://www.streamingdigitally.com/wp-content/uploads/2022/10/LouisArmstrongHouseMuseum_Photo_Office-768x495.webp 768w, https://www.streamingdigitally.com/wp-content/uploads/2022/10/LouisArmstrongHouseMuseum_Photo_Office-670x432.webp 670w, https://www.streamingdigitally.com/wp-content/uploads/2022/10/LouisArmstrongHouseMuseum_Photo_Office-210x135.webp 210w, https://www.streamingdigitally.com/wp-content/uploads/2022/10/LouisArmstrongHouseMuseum_Photo_Office-775x500.webp 775w, https://www.streamingdigitally.com/wp-content/uploads/2022/10/LouisArmstrongHouseMuseum_Photo_Office-419x270.webp 419w, https://www.streamingdigitally.com/wp-content/uploads/2022/10/LouisArmstrongHouseMuseum_Photo_Office-380x245.webp 380w, https://www.streamingdigitally.com/wp-content/uploads/2022/10/LouisArmstrongHouseMuseum_Photo_Office-202x130.webp 202w, https://www.streamingdigitally.com/wp-content/uploads/2022/10/LouisArmstrongHouseMuseum_Photo_Office-651x420.webp 651w" sizes="(max-width: 1000px) 100vw, 1000px" /></figure>
+
+
+
+<p>Louis Armstrong and his last spouse, Lucille Armstrong moved to Corona, Queens in New York. The house Armstrong purchased was later turned into a museum which is now known as the “Louis Armstrong House Museum.” If you ever happen to visit Queens, book a tour to explore a collection of mementos which include personal belongings, notepads of scribbled notes and voice recordings of Pops, as Armstrong is called.</p>
+
+
+
+<h2><span class="ez-toc-section" id="What_is_Louis_Armstrongs_Black_and_Blues_about"></span>What is &#8216;Louis Armstrong’s Black and Blues&#8217; about?<span class="ez-toc-section-end"></span></h2>
+
+
+
+<p>Apple TV bought the rights to the much-anticipated documentary featuring the founding father of Jazz. <em>Black &amp; Blues: The Colorful Ballad of Louis Armstrong </em>will see the musician’s life from a fresh and never before seen perspective relying on hundreds of hours of audio recordings, video footage, pictures, personal diaries, and other mementos from a lifetime.</p>
+
+
+
+<h2><span class="ez-toc-section" id="What_is_the_plot_of_Louis_Armstrongs_Black_and_Blues"></span>What is the plot of &#8216;Louis Armstrong’s Black and Blues&#8217;?<span class="ez-toc-section-end"></span></h2>
+
+
+
+<p><em>Louis Armstrong&#8217;s Black &amp; Blues</em> looks at one of the finest musicians of the 20th century. The combination of political analysis, musical appreciation, and personal biography will allow us to address the side of Louis Armstrong which remained unveiled. It further explores how Armstrong was viewed by a more radical, younger generation who believed he was too courteous of white audiences.</p>
+
+
+
+<h2><span class="ez-toc-section" id="Louis_Armstrongs_Black_and_Blues_official_trailer"></span>&#8216;Louis Armstrong’s Black and Blues&#8217; official trailer<span class="ez-toc-section-end"></span></h2>
+
+
+
+<p>Major goosebumps as we watch the official trailer for the Apple TV documentary. It teases the essence of the documentary as perfectly as it could, the music is timed to perfection, and features clips from the film which are sure to build anticipation around the documentary.</p>
+
+
+
+<figure class="wp-block-embed is-type-video is-provider-youtube wp-block-embed-youtube wp-embed-aspect-16-9 wp-has-aspect-ratio"><div class="wp-block-embed__wrapper">
+<iframe loading="lazy" title="Louis Armstrong&#039;s Black &amp; Blues — Official Trailer | Apple TV+" width="670" height="377" src="https://www.youtube.com/embed/o5jbSeBHVTQ?feature=oembed&#038;autoplay=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div></figure>
+
+
+
+<h2><span class="ez-toc-section" id="What_is_the_story_behind_the_title_of_the_documentary"></span>What is the story behind the title of the documentary?<span class="ez-toc-section-end"></span></h2>
+
+
+
+<p>The title “Louis Armstrong’s Black and Blues” comes from one of his hit songs targeting racial injustice. Armstrong was badly impacted by the gruesome beatings of African Americans by the police and the song was in response to that. Black and Blue concludes in the following lines, “<em>My only sin is in my skin, What did I do to be so black and blue?”&nbsp;</em></p>
+
+
+
+<p>We feel the title has been carefully chosen by the director, Sacha Jenkins who summarized the events occurring in the life of Armstrong in one of his own songs. Could there be any other title than this?&nbsp; Watch the trailer again and you may be able to second us on this. Here’s a clip of Louis Armstrong singing Black and Blue in East Berlin, albeit, with a significant lyrical change&nbsp;</p>
+
+
+
+<figure class="wp-block-embed is-type-video is-provider-youtube wp-block-embed-youtube wp-embed-aspect-4-3 wp-has-aspect-ratio"><div class="wp-block-embed__wrapper">
+<iframe loading="lazy" title="Louis Armstrong - Black And Blue" width="670" height="503" src="https://www.youtube.com/embed/2LDPUfbXRLM?feature=oembed&#038;autoplay=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div></figure>
+
+
+
+<h2><span class="ez-toc-section" id="Whats_the_cast_of_Louis_Armstrongs_Black_and_Blues"></span>What&#8217;s the cast of &#8216;Louis Armstrong’s Black and Blues&#8217;?<span class="ez-toc-section-end"></span></h2>
+
+
+
+<p>The cast of <em>Louis Armstrong’s Black and Blues </em>features many people, some with only voices while some are taped and can be seen in the archival footage. We’ll be hearing Nas narrates some of Armstrong’s writings, while Steve Allen, Lucille Armstrong, and James Young among several others have marked their presence through audio in the documentary. Some archival footage will be featuring the likes of Wynton Marsalis, Miles Davis, Leonard Bernstein, Dizzy Gillespie, and others.</p>
+
+
+
+<h2><span class="ez-toc-section" id="Sacha_Jenkins_the_man_behind_Louis_Armstrongs_Black_and_Blues"></span>Sacha Jenkins, the man behind &#8216;Louis Armstrong’s Black and Blues&#8217;<span class="ez-toc-section-end"></span></h2>
+
+
+
+<p><em>Louis Armstrong’s Black and Blues </em>is directed by Sacha Jenkins who is best known for directing <em>Fresh Dressed, Everything’s Gonna Be All White, </em>and<em> Of Mics and Men</em>. The Primetime Emmy Awards Nominee has a vast experience in hip-hop and African American musicians which makes it all the more relevant to have been able to produce a stellar masterpiece as that of <em>Louis Armstrong’s Black and Blues.</em></p>
+
+
+<div class="wp-block-image">
+<figure class="aligncenter size-large"><img data-dominant-color="5b5559" data-has-transparency="false" style="--dominant-color: #5b5559;" loading="lazy" width="1024" height="683" src="https://www.streamingdigitally.com/wp-content/uploads/2022/10/GettyImages-1422038666-1024x683.webp" alt="" class="not-transparent wp-image-308294" srcset="https://www.streamingdigitally.com/wp-content/uploads/2022/10/GettyImages-1422038666-1024x683.webp 1024w, https://www.streamingdigitally.com/wp-content/uploads/2022/10/GettyImages-1422038666-300x200.webp 300w, https://www.streamingdigitally.com/wp-content/uploads/2022/10/GettyImages-1422038666-150x100.webp 150w, https://www.streamingdigitally.com/wp-content/uploads/2022/10/GettyImages-1422038666-768x512.webp 768w, https://www.streamingdigitally.com/wp-content/uploads/2022/10/GettyImages-1422038666-670x447.webp 670w, https://www.streamingdigitally.com/wp-content/uploads/2022/10/GettyImages-1422038666-210x140.webp 210w, https://www.streamingdigitally.com/wp-content/uploads/2022/10/GettyImages-1422038666-750x500.webp 750w, https://www.streamingdigitally.com/wp-content/uploads/2022/10/GettyImages-1422038666-405x270.webp 405w, https://www.streamingdigitally.com/wp-content/uploads/2022/10/GettyImages-1422038666-380x253.webp 380w, https://www.streamingdigitally.com/wp-content/uploads/2022/10/GettyImages-1422038666-195x130.webp 195w, https://www.streamingdigitally.com/wp-content/uploads/2022/10/GettyImages-1422038666-630x420.webp 630w, https://www.streamingdigitally.com/wp-content/uploads/2022/10/GettyImages-1422038666.webp 1200w" sizes="(max-width: 1024px) 100vw, 1024px" /><figcaption>Sacha Jenkins</figcaption></figure></div>
+
+
+<h2><span class="ez-toc-section" id="Sacha_Jenkins_on_making_Louis_Armstrongs_Black_and_Blues"></span>Sacha Jenkins on making &#8216;Louis Armstrong’s Black and Blues&#8217;<span class="ez-toc-section-end"></span></h2>
+
+
+
+<p><em>Louis Armstrong’s Black and Blues </em>is an exclusive look into the trumpeter’s life. Many couldn’t have imagined the battles Armstrong fought, and from where the music that he created stemmed from. That’s the core director Jenkins focused on. <a href="https://www.youtube.com/watch?v=PdSEcSRFEDc">Speaking</a> with The Upcoming, he revealed why we felt it necessary to start from the beginning, he claimed, “<em>I thought it was really important to start from the beginning and to understand where he came from</em>.” he added further, “<em>in order to really understand the music, you’ve got to understand the climate and the environment that created it.</em>”</p>
+
+
+
+<h2><span class="ez-toc-section" id="What_are_the_reviews_of_Louis_Armstrongs_Black_and_Blues"></span>What are the reviews of &#8216;Louis Armstrong’s Black and Blues&#8217;?<span class="ez-toc-section-end"></span></h2>
+
+
+
+<p><em>Louis Armstrong’s Black and Blues </em>penetrates deeper than the realms of just his musical developments and many critics have commented over this. John Defore of <a href="https://www.hollywoodreporter.com/movies/movie-reviews/louis-armstrong-black-and-blues-tiff-1235215928/" target="_blank" rel="noreferrer noopener nofollow">The Hollywood Reporter</a> claims, “<em>This is not a work of musicology, and if you want someone to explain how Armstrong changed jazz, look elsewhere.</em>” Similarly, Ludovic Hunter-Tilney from the Financial Times concluded his critique in the following words, “<em>There is less insight about his musical development, however. That is the high note that eludes an otherwise well-made and enjoyable documentary.</em>”&nbsp;</p>
+
+
+
+<p>The documentary has overall been well received as you may be able to tell by what Leslie Felperin wrote for <a href="https://www.theguardian.com/film/2022/oct/26/louis-armstrongs-black-blues-review-swinging-doc-is-a-stirring-tribute" target="_blank" rel="noreferrer noopener nofollow">The Guardian</a>, “<em>The film also represents an excellent primer for younger viewers who might only know Armstrong from, say, his cover of La Vie en Rose in Wall-E.</em>” The Hollywood Reporter highlighted and called Jenkin’s masterpiece “Delightful, provocative and far too short.”</p>
+
+
+
+<h2><span class="ez-toc-section" id="What_is_the_IMDb_and_Rotten_Tomatoes_rating_for_Louis_Armstrongs_Black_and_Blues"></span>What is the IMDb and Rotten Tomatoes rating for &#8216;Louis Armstrong’s Black and Blues&#8217;?<span class="ez-toc-section-end"></span></h2>
+
+
+
+<p>The documentary received an <a href="https://www.imdb.com/title/tt14447458/">IMDb</a> rating of 8.3/10 while the <a href="https://www.rottentomatoes.com/m/louis_armstrongs_black_and_blues">Tomatometer</a> indicates a full 100% rating.</p>
+
+
+
+<h2><span class="ez-toc-section" id="What_are_the_reactions_and_comments_about_Louis_Armstrongs_Black_and_Blues"></span>What are the reactions and comments about &#8216;Louis Armstrong’s Black and Blues&#8217;?<span class="ez-toc-section-end"></span></h2>
+
+
+
+<p>People all over the world remember Louis Armstrong, although some may still speak badly of him. This documentary is an attempt to show the newer generations what Armstrong was really like. Others all over the internet are expressing their opinions by taking to their social media handles.&nbsp;</p>
+
+
+
+<p><img loading="lazy" src="https://lh5.googleusercontent.com/R1zGSnLEzvcJ7olxZF9usKITlvLpo9ckWPBxIpjmSgNJ5EQXQ9AH74mg6fwSbpmOfVFp7UGp1WKVGSsujhmA61bEi5MM5JTCIdcYojLPxI4TxZ0nLWe7cQ8FOyeNLS_Q_lrMmSK0pdumHmWLOW1CmTPPeGx7Io_fiGij8R5x3jee5Uf6h_nWxIzjGQ" width="513" height="90"></p>
+
+
+
+<figure class="wp-block-embed is-type-rich is-provider-twitter wp-block-embed-twitter"><div class="wp-block-embed__wrapper">
+<blockquote class="twitter-tweet" data-width="550" data-dnt="true"><p lang="en" dir="ltr">&quot;Louis Armstrong&#39;s Black &amp;  Blues&quot; is here! And, I am very excited! Louis Daniel Armstrong is one of my favorite Ancestors! His life&#39;s story is phenomenal! Please read and watch trailer! Thank you! Love you, Pops! 💖 <a href="https://t.co/vPdIGV8Jka">https://t.co/vPdIGV8Jka</a></p>&mdash; Maceo Leon Thomas (@maceo_thomas) <a href="https://twitter.com/maceo_thomas/status/1581840301878312961?ref_src=twsrc%5Etfw">October 17, 2022</a></blockquote><script data-minify="1" async src="https://www.streamingdigitally.com/wp-content/cache/min/1/widgets.js?ver=1667207049" charset="utf-8"></script>
+</div></figure>
+
+
+
+<figure class="wp-block-embed is-type-rich is-provider-twitter wp-block-embed-twitter"><div class="wp-block-embed__wrapper">
+<blockquote class="twitter-tweet" data-width="550" data-dnt="true"><p lang="en" dir="ltr">I got goosebumps just watching the trailer for LOUIS ARMSTRONG&#39;S BLACK AND BLUES. I&#39;m not sure my soft soul and my leaky eyeballs are going to survive the actual movie. <a href="https://t.co/hvfUhviuNG">https://t.co/hvfUhviuNG</a></p>&mdash; Devin R Brews (@Doctor_Teeth) <a href="https://twitter.com/Doctor_Teeth/status/1580953551832219649?ref_src=twsrc%5Etfw">October 14, 2022</a></blockquote><script data-minify="1" async src="https://www.streamingdigitally.com/wp-content/cache/min/1/widgets.js?ver=1667207049" charset="utf-8"></script>
+</div></figure>
+
+
+
+<figure class="wp-block-embed is-type-rich is-provider-twitter wp-block-embed-twitter"><div class="wp-block-embed__wrapper">
+<blockquote class="twitter-tweet" data-width="550" data-dnt="true"><p lang="en" dir="ltr">Can&#39;t wait for this doc about the legendary Satchmo, Louis Armstrong. Thrilled even more that the film is <a href="https://twitter.com/AppleTVPlus?ref_src=twsrc%5Etfw">@AppleTVPlus</a> produced and distributed. Louis Armstrong&#39;s Black &amp; Blues — Official Trailer | Apple TV+ <a href="https://t.co/jly7eCxuTH">https://t.co/jly7eCxuTH</a> via <a href="https://twitter.com/YouTube?ref_src=twsrc%5Etfw">@YouTube</a></p>&mdash; Carly Nelson Marcoe (@CarlyNMarcoe) <a href="https://twitter.com/CarlyNMarcoe/status/1581196950921093120?ref_src=twsrc%5Etfw">October 15, 2022</a></blockquote><script data-minify="1" async src="https://www.streamingdigitally.com/wp-content/cache/min/1/widgets.js?ver=1667207049" charset="utf-8"></script>
+</div></figure>
+
+
+
+<h2><span class="ez-toc-section" id="What_else_can_I_watch_on_Apple_TV"></span>What else can I watch on Apple TV+?<span class="ez-toc-section-end"></span></h2>
+
+
+
+<ul><li>Shining Girls</li><li><a href="https://www.streamingdigitally.com/watch-central-park-series/" target="_blank" rel="noreferrer noopener">Central Park</a></li><li>See</li><li>Causeway</li><li>Ghostwriter</li><li><a href="https://www.streamingdigitally.com/watch-acapulco-series/" target="_blank" rel="noreferrer noopener">Acapulco</a></li><li><a href="https://www.streamingdigitally.com/watch-shantaram-series/" target="_blank" rel="noreferrer noopener">Shantaram</a></li><li>The Snoopy Show</li></ul>
+
+
+
+<h2><span class="ez-toc-section" id="Other_movies_like_Louis_Armstrongs_Black_and_Blues"></span>Other movies like &#8216;Louis Armstrong’s Black and Blues&#8217;<span class="ez-toc-section-end"></span></h2>
+
+
+
+<ul><li><a href="https://www.streamingdigitally.com/watch-sidney-documentary/" target="_blank" rel="noreferrer noopener">Sidney</a></li><li><a href="https://www.streamingdigitally.com/watch-gutsy-documentary/" target="_blank" rel="noreferrer noopener">Gutsy</a></li><li>Selena Gomez: My Mind and Me</li><li>Home</li><li>Greatness Code</li><li>Prehistoric Planet</li><li>The Big Conn</li><li>Make or Break</li></ul>
+
+
+
+<h2><span class="ez-toc-section" id="FAQs"></span>FAQs<span class="ez-toc-section-end"></span></h2>
+
+
+
+<h3>What was Louis Armstrong’s biggest hit?</h3>
+
+
+
+<p>According to the old music charts, the biggest hits were “All of Me”, released in 1932, and “Hello, Dolly!”, released in 1964.</p>
+
+
+
+<h3>Is the Louis Armstrong documentary on Netflix?</h3>
+
+
+
+<p>No, unfortunately, Black and Blues is only available on Apple TV.</p>
+
+
+
+<h2 id="vpn"><span class="ez-toc-section" id="Best_VPNs_to_watch_Louis_Armstrongs_Black_and_Blues_from_anywhere"></span><strong>Best VPNs to watch&nbsp;<em>&#8216;Louis Armstrong’s Black and Blues&#8217; </em>from anywhere</strong><span class="ez-toc-section-end"></span></h2>
+
+
+
+								<h2 class="ppc_cta_link" id="expressvpn_heading"><span class="ez-toc-section" id="ExpressVPN"></span>ExpressVPN<span class="ez-toc-section-end"></span></h2>						
+								<p>
+								In our testing, <a class="ppc_green_inline_btn" href="https://www.streamingdigitally.com/stream/expressvpn" target="_blank">ExpressVPN</a> performed spectacularly. We mainly focus on their streaming ability and to our surprise they have surpassed all other VPN providers when it comes to speed, which is a big plus.
+								</p>
+								<p>You will experience no noticeable drop in speed, which is quite common when you connect to a VPN. However, ExpressVPN provides seamless streaming and that too with a wide range of options (Netflix, HBOMax, Hulu, Disney+, Hotstar, Paramount+, Peacock, BBCiPlayer and many other streaming and sports channels). Buying ExpressVPN not only brings you peace of mind, but also unblocks thousands of streaming platforms and channels from around the world.
+								</p>
+								<div class="clearfix clear_all">
+								<div class="pros sect_special">
+								<p class="pros_heading"><strong>Pros:</strong></p>
+								<ul class="pros_ul">
+								<li>Fastest VPN, with the most premium features among all VPN services</li>
+								<li>Seamless streaming on Servus TV, ESPN, Netflix, Hulu, HBO Max, Paramount+, Peacock, Disney+, Hotstar and thousands of other streaming and sports channels.</li>
+								<li>Solid back-end infrastructure and Zero Logs.</li>
+								<li>Always-available customer support.</li>
+								<li>30-day money back guarantee.</li>
+								<li>Torrenting with no bandwidth caps.</li>
+								<li>Supported devices include Mac, Windows, Android, iOS, Linux, Firestick, Kodi</li>
+								</ul>
+								</div>											
+								<div class="cons sect_special">
+								<p class="cons_heading"><strong>Cons:</strong></p>
+								<ul class="cons_ul">
+								<li>A bit expensive than other VPN services</li>
+								<li>Their browser extension is slightly slower</li>
+								</ul>
+								</div>
+								</div>
+								
+								<p>The other factor that gives them a leg up is their security infrastructure and zero-log policy that makes your online activity completely invisible or untraceable on the internet.
+								</p>
+								<p>We also noticed that ExpressVPN’s smart DNS feature lets you untap exotic locations to stream content, which is otherwise impossible. Then there the whole world of torrenting that opens up, that too without leaving a trace. This is great for those who love binging on shows.												</p>
+								<p><strong><a class="special_deal_text" href="https://www.streamingdigitally.com/stream/expressvpn"  target="_blank">Exclusive deal: Get 3 extra months free when you sign up for a 12-month plan. That&apos;s a saving of 49%!</a></strong></p>
+								<figure class="wp-block-image size-large expressvpn_figure"><a class="ppc_green_img" href="https://www.streamingdigitally.com/stream/expressvpn" target="_blank"><img loading="lazy" src="https://www.streamingdigitally.com/wp-content/uploads/2022/08/expressvpn_new_banner-768x597.webp" alt="" class="wp-image-14384" srcset="https://www.streamingdigitally.com/wp-content/uploads/2022/08/expressvpn_new_banner-768x597.webp 1024w, https://www.streamingdigitally.com/wp-content/uploads/2022/08/expressvpn_new_banner-300x233.webp 300w, https://www.streamingdigitally.com/wp-content/uploads/2022/08/expressvpn_new_banner-768x597.webp 768w, https://www.streamingdigitally.com/wp-content/uploads/2022/08/expressvpn_new_banner-670x520.webp 670w, https://www.streamingdigitally.com/wp-content/uploads/2022/08/expressvpn_new_banner.webp 1300w" sizes="(max-width: 1024px) 100vw, 1024px" width="1024" height="576"></a></figure>
+								<div class="text-center"><a class="ppc_green expressvpn" href="https://www.streamingdigitally.com/stream/expressvpn" target="_blank">Get 49% Off ExpressVPN</a></div>
+									<h2 class="ppc_cta_link" " id="purevpn_heading">PureVPN</h2>						
+									<p>In our testing, PureVPN turned out to be the best VPN for streaming movies, shows and sports on platforms like Servus TV, ESPN, HBO Max, Disney Plus, Paramount Plus, BBC iPlayer, Prime Video, and Showtime. It also gave us access to all the Netflix libraries we tried to access, including US, UK, Australia, Canada, and Japan. We recommend it for its impressive speed and reliable connection.</p>
+									
+									<figure class="wp-block-image size-large purevpn_figure"><a class="ppc_green_img" href="https://www.streamingdigitally.com/stream/purevpn" target="_blank"><img loading="lazy" src="https://www.streamingdigitally.com/wp-content/uploads/2022/04/pasted-image-0-45-1024x480.png" alt="" class="wp-image-14378" srcset="https://www.streamingdigitally.com/wp-content/uploads/2022/04/pasted-image-0-45-1024x480.png 1024w, https://www.streamingdigitally.com/wp-content/uploads/2022/04/pasted-image-0-45-300x141.png 300w, https://www.streamingdigitally.com/wp-content/uploads/2022/04/pasted-image-0-45-768x360.png 768w, https://www.streamingdigitally.com/wp-content/uploads/2022/04/pasted-image-0-45-670x314.png 670w, https://www.streamingdigitally.com/wp-content/uploads/2022/04/pasted-image-0-45.png 1280w" sizes="(max-width: 1024px) 100vw, 1024px" width="1024" height="480"></a></figure>
+									<div class="text-center"><a class="ppc_green purevpn" href="https://www.streamingdigitally.com/stream/purevpn" target="_blank">Stream it now</a></div>
+<div class="addtoany_share_save_container addtoany_content addtoany_content_bottom"><div class="a2a_kit a2a_kit_size_32 addtoany_list" data-a2a-url="https://www.streamingdigitally.com/watch-louis-armstrong-s-black-and-blues-documentary/" data-a2a-title="Watch ‘Louis Armstrong’s Black and Blues’ from anywhere: Release date, cast, trailer and more"><a class="a2a_button_facebook" href="https://www.addtoany.com/add_to/facebook?linkurl=https%3A%2F%2Fwww.streamingdigitally.com%2Fwatch-louis-armstrong-s-black-and-blues-documentary%2F&amp;linkname=Watch%20%E2%80%98Louis%20Armstrong%E2%80%99s%20Black%20and%20Blues%E2%80%99%20from%20anywhere%3A%20Release%20date%2C%20cast%2C%20trailer%20and%20more" title="Facebook" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_twitter" href="https://www.addtoany.com/add_to/twitter?linkurl=https%3A%2F%2Fwww.streamingdigitally.com%2Fwatch-louis-armstrong-s-black-and-blues-documentary%2F&amp;linkname=Watch%20%E2%80%98Louis%20Armstrong%E2%80%99s%20Black%20and%20Blues%E2%80%99%20from%20anywhere%3A%20Release%20date%2C%20cast%2C%20trailer%20and%20more" title="Twitter" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_email" href="https://www.addtoany.com/add_to/email?linkurl=https%3A%2F%2Fwww.streamingdigitally.com%2Fwatch-louis-armstrong-s-black-and-blues-documentary%2F&amp;linkname=Watch%20%E2%80%98Louis%20Armstrong%E2%80%99s%20Black%20and%20Blues%E2%80%99%20from%20anywhere%3A%20Release%20date%2C%20cast%2C%20trailer%20and%20more" title="Email" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_whatsapp" href="https://www.addtoany.com/add_to/whatsapp?linkurl=https%3A%2F%2Fwww.streamingdigitally.com%2Fwatch-louis-armstrong-s-black-and-blues-documentary%2F&amp;linkname=Watch%20%E2%80%98Louis%20Armstrong%E2%80%99s%20Black%20and%20Blues%E2%80%99%20from%20anywhere%3A%20Release%20date%2C%20cast%2C%20trailer%20and%20more" title="WhatsApp" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_reddit" href="https://www.addtoany.com/add_to/reddit?linkurl=https%3A%2F%2Fwww.streamingdigitally.com%2Fwatch-louis-armstrong-s-black-and-blues-documentary%2F&amp;linkname=Watch%20%E2%80%98Louis%20Armstrong%E2%80%99s%20Black%20and%20Blues%E2%80%99%20from%20anywhere%3A%20Release%20date%2C%20cast%2C%20trailer%20and%20more" title="Reddit" rel="nofollow noopener" target="_blank"></a><a class="a2a_dd addtoany_share_save addtoany_share" href="https://www.addtoany.com/share"></a></div></div>			</div>
+	
+		
+	<footer class="entry-footer">
+			</footer>
+</article>
+						
+							<nav role="navigation" id="nav-below" class="post-navigation">
+		<h4 class="screen-reader-text sr-only">Post navigation</h4>
+
+	
+		<div class="nav-previous"><a href="https://www.streamingdigitally.com/news/nyla-innuksuk-talks-about-alien-creatures-look-in-slash-back/" rel="prev"><span class="meta-nav"><i class="fa fa-chevron-left"></i></span> Nyla Innuksuk talks about &#8216;alien creatures&#8217; look in &#8216;Slash/Back&#8217;</a></div>		<div class="nav-next"><a href="https://www.streamingdigitally.com/watch-garcia/" rel="next">Watch &#8216;Garcia Season 1&#8217; from anywhere: Release date, cast, trailer and more <span class="meta-nav"><i class="fa fa-chevron-right"></i></span></a></div>
+	
+	</nav>
+							
+						
+		<div class="related-posts">
+		<h2 class="related-posts-title"><span>Related</span> Articles.</h2>
+		<div class="related-content">
+			<div class="row">
+								<article class="related-post clearfix col-sm-4">
+										<div class="entry-thumbnail">
+						<a href="https://www.streamingdigitally.com/watch-new-amsterdam-series/" rel="bookmark">
+							<img width="380" height="214" src="https://www.streamingdigitally.com/wp-content/uploads/2022/11/Ff9sVdaWQAEjzRy-380x214.webp" class="attachment-dw-upcoming-thumb size-dw-upcoming-thumb not-transparent wp-post-image" alt="New Amsterdam season 5" loading="lazy" srcset="https://www.streamingdigitally.com/wp-content/uploads/2022/11/Ff9sVdaWQAEjzRy-380x214.webp 380w, https://www.streamingdigitally.com/wp-content/uploads/2022/11/Ff9sVdaWQAEjzRy-300x169.webp 300w, https://www.streamingdigitally.com/wp-content/uploads/2022/11/Ff9sVdaWQAEjzRy-150x85.webp 150w, https://www.streamingdigitally.com/wp-content/uploads/2022/11/Ff9sVdaWQAEjzRy-210x118.webp 210w, https://www.streamingdigitally.com/wp-content/uploads/2022/11/Ff9sVdaWQAEjzRy-480x270.webp 480w, https://www.streamingdigitally.com/wp-content/uploads/2022/11/Ff9sVdaWQAEjzRy-231x130.webp 231w, https://www.streamingdigitally.com/wp-content/uploads/2022/11/Ff9sVdaWQAEjzRy.webp 550w" sizes="(max-width: 380px) 100vw, 380px" data-has-transparency="false" data-dominant-color="5c4752" style="--dominant-color: #5c4752;" />						</a>
+					</div>
+										<h3 class="related-title"><a href="https://www.streamingdigitally.com/watch-new-amsterdam-series/" rel="bookmark">Watch &#8216;New Amsterdam Season 5&#8217; from anywhere: Release date, cast, trailer and more</a></h3>
+					<div class="rating-star">
+		            		            </div>
+					<div class="related-meta"><span class="related-date"><a href="https://www.streamingdigitally.com/watch-new-amsterdam-series/" rel="bookmark"><i class="fa fa-clock-o"></i> 02 Nov, 2022</a></span></div>
+				</article>
+								<article class="related-post clearfix col-sm-4">
+										<div class="entry-thumbnail">
+						<a href="https://www.streamingdigitally.com/watch-chicago-med/" rel="bookmark">
+							<img width="380" height="214" src="https://www.streamingdigitally.com/wp-content/uploads/2022/11/Chicago-Med-380x214.webp" class="attachment-dw-upcoming-thumb size-dw-upcoming-thumb not-transparent wp-post-image" alt="Poster of Chicago Med" loading="lazy" srcset="https://www.streamingdigitally.com/wp-content/uploads/2022/11/Chicago-Med-380x214.webp 380w, https://www.streamingdigitally.com/wp-content/uploads/2022/11/Chicago-Med-300x169.webp 300w, https://www.streamingdigitally.com/wp-content/uploads/2022/11/Chicago-Med-1024x576.webp 1024w, https://www.streamingdigitally.com/wp-content/uploads/2022/11/Chicago-Med-150x84.webp 150w, https://www.streamingdigitally.com/wp-content/uploads/2022/11/Chicago-Med-768x432.webp 768w, https://www.streamingdigitally.com/wp-content/uploads/2022/11/Chicago-Med-1536x864.webp 1536w, https://www.streamingdigitally.com/wp-content/uploads/2022/11/Chicago-Med-670x377.webp 670w, https://www.streamingdigitally.com/wp-content/uploads/2022/11/Chicago-Med-210x118.webp 210w, https://www.streamingdigitally.com/wp-content/uploads/2022/11/Chicago-Med-889x500.webp 889w, https://www.streamingdigitally.com/wp-content/uploads/2022/11/Chicago-Med-480x270.webp 480w, https://www.streamingdigitally.com/wp-content/uploads/2022/11/Chicago-Med-231x130.webp 231w, https://www.streamingdigitally.com/wp-content/uploads/2022/11/Chicago-Med-747x420.webp 747w, https://www.streamingdigitally.com/wp-content/uploads/2022/11/Chicago-Med.webp 1920w" sizes="(max-width: 380px) 100vw, 380px" data-has-transparency="false" data-dominant-color="0d4c47" style="--dominant-color: #0d4c47;" />						</a>
+					</div>
+										<h3 class="related-title"><a href="https://www.streamingdigitally.com/watch-chicago-med/" rel="bookmark">Watch New Episodes of &#8216;Chicago Med Season 8&#8217; from anywhere: Release date, cast, trailer and more</a></h3>
+					<div class="rating-star">
+		            		            </div>
+					<div class="related-meta"><span class="related-date"><a href="https://www.streamingdigitally.com/watch-chicago-med/" rel="bookmark"><i class="fa fa-clock-o"></i> 02 Nov, 2022</a></span></div>
+				</article>
+								<article class="related-post clearfix col-sm-4">
+										<div class="entry-thumbnail">
+						<a href="https://www.streamingdigitally.com/watch-chicago-fire/" rel="bookmark">
+							<img width="380" height="214" src="https://www.streamingdigitally.com/wp-content/uploads/2022/11/Chicago-Fire-380x214.webp" class="attachment-dw-upcoming-thumb size-dw-upcoming-thumb not-transparent wp-post-image" alt="Poster of Chicago Fire" loading="lazy" srcset="https://www.streamingdigitally.com/wp-content/uploads/2022/11/Chicago-Fire-380x214.webp 380w, https://www.streamingdigitally.com/wp-content/uploads/2022/11/Chicago-Fire-300x169.webp 300w, https://www.streamingdigitally.com/wp-content/uploads/2022/11/Chicago-Fire-150x84.webp 150w, https://www.streamingdigitally.com/wp-content/uploads/2022/11/Chicago-Fire-768x432.webp 768w, https://www.streamingdigitally.com/wp-content/uploads/2022/11/Chicago-Fire-670x377.webp 670w, https://www.streamingdigitally.com/wp-content/uploads/2022/11/Chicago-Fire-210x118.webp 210w, https://www.streamingdigitally.com/wp-content/uploads/2022/11/Chicago-Fire-888x500.webp 888w, https://www.streamingdigitally.com/wp-content/uploads/2022/11/Chicago-Fire-480x270.webp 480w, https://www.streamingdigitally.com/wp-content/uploads/2022/11/Chicago-Fire-231x130.webp 231w, https://www.streamingdigitally.com/wp-content/uploads/2022/11/Chicago-Fire-746x420.webp 746w, https://www.streamingdigitally.com/wp-content/uploads/2022/11/Chicago-Fire.webp 1000w" sizes="(max-width: 380px) 100vw, 380px" data-has-transparency="false" data-dominant-color="36170f" style="--dominant-color: #36170f;" />						</a>
+					</div>
+										<h3 class="related-title"><a href="https://www.streamingdigitally.com/watch-chicago-fire/" rel="bookmark">Watch &#8216;Chicago Fire Season 11&#8217; from anywhere: Release date, cast, trailer, and more</a></h3>
+					<div class="rating-star">
+		            		            </div>
+					<div class="related-meta"><span class="related-date"><a href="https://www.streamingdigitally.com/watch-chicago-fire/" rel="bookmark"><i class="fa fa-clock-o"></i> 02 Nov, 2022</a></span></div>
+				</article>
+							</div>
+		</div>
+	</div>
+							
+						
+<section id="comments" class="comments">
+	
+	
+		<div id="respond" class="comment-respond">
+		<h3 id="reply-title" class="comment-reply-title">Leave a Reply <small><a rel="nofollow" id="cancel-comment-reply-link" href="/watch-louis-armstrong-s-black-and-blues-documentary/#respond" style="display:none;">Cancel reply</a></small></h3><form action="https://www.streamingdigitally.com/wp-comments-post.php" method="post" id="commentform" class="comment-form"><p class="comment-form-comment"><label for="comment">Comment</label><textarea id="comment" name="comment" class="form-control" rows="5" aria-required="true"></textarea></p><input name="wpml_language_code" type="hidden" value="en" /><p class="comment-form-author"><label for="author">Name</label> <span class="required">*</span><input id="author" name="author" type="text" value="" class="form-control" aria-required='true' /></p>
+<p class="comment-form-email"><label for="email">Email</label> <span class="required">*</span><input id="email" name="email" type="text" value="" class="form-control" aria-required='true' /></p>
+<p class="comment-form-url"><label for="url">Website</label><input id="url" name="url" type="text" value="" class="form-control" /></p>
+<p class="comment-form-cookies-consent"><input id="wp-comment-cookies-consent" name="wp-comment-cookies-consent" type="checkbox" value="yes" /> <label for="wp-comment-cookies-consent">Save my name, email, and website in this browser for the next time I comment.</label></p>
+<div class="gglcptch gglcptch_v2"><div id="gglcptch_recaptcha_550053161" class="gglcptch_recaptcha"></div>
+				<noscript>
+					<div style="width: 302px;">
+						<div style="width: 302px; height: 422px; position: relative;">
+							<div style="width: 302px; height: 422px; position: absolute;">
+								<iframe src="https://www.google.com/recaptcha/api/fallback?k=6LeVdpIeAAAAAE3fVcQAOjCrgD5HcqtIEGOvpKyz" frameborder="0" scrolling="no" style="width: 302px; height:422px; border-style: none;"></iframe>
+							</div>
+						</div>
+						<div style="border-style: none; bottom: 12px; left: 25px; margin: 0px; padding: 0px; right: 25px; background: #f9f9f9; border: 1px solid #c1c1c1; border-radius: 3px; height: 60px; width: 300px;">
+							<textarea id="g-recaptcha-response" name="g-recaptcha-response" class="g-recaptcha-response" style="width: 250px !important; height: 40px !important; border: 1px solid #c1c1c1 !important; margin: 10px 25px !important; padding: 0px !important; resize: none !important;"></textarea>
+						</div>
+					</div>
+				</noscript></div><p class="form-submit"><input name="submit" type="submit" id="submit" class="btn btn-default" value="Post Comment" /> <input type='hidden' name='comment_post_ID' value='308258' id='comment_post_ID' />
+<input type='hidden' name='comment_parent' id='comment_parent' value='0' />
+</p></form>	</div><!-- #respond -->
+	
+</section>
+					
+												
+					</div>
+						
+				</div>				
+			</div>
+		</div>
+				</section>
+				</div>
+	</main>
+
+	<footer id="colophon" class="site-footer" role="contentinfo">
+		<div class="container">
+			<div class="site-tools">
+				<div class="row">
+					<div class="breadcrumb col-sm-9">
+						<!-- Breadcrumb NavXT 7.1.0 -->
+<span property="itemListElement" typeof="ListItem"><a property="item" typeof="WebPage" title="Go to Streaming Digitally." href="https://www.streamingdigitally.com" class="home" ><span property="name">Streaming Digitally</span></a><meta property="position" content="1"></span> &gt; <span property="itemListElement" typeof="ListItem"><a property="item" typeof="WebPage" title="Go to the Apple TV Category archives." href="https://www.streamingdigitally.com/apple-tv/" class="taxonomy category" ><span property="name">Apple TV</span></a><meta property="position" content="2"></span> &gt; <span property="itemListElement" typeof="ListItem"><span property="name" class="post post-post current-item">Watch &#8216;Louis Armstrong&rsquo;s Black and Blues&#8217; from anywhere: Release date, cast, trailer and more</span><meta property="url" content="https://www.streamingdigitally.com/watch-louis-armstrong-s-black-and-blues-documentary/"><meta property="position" content="3"></span>					</div>
+					<a class="back-top col-sm-3" href="#page"><i class="fa fa-arrow-circle-up"></i> Back to top</a>
+				</div>
+			</div>
+
+			<div id="sidebar-footer" class="widget-area">
+				<div class="row">
+					<div class="col-sm-6 col-md-3">
+											</div>
+
+					<div class="col-sm-6 col-md-2">
+											</div>
+
+					<div class="col-sm-6 col-md-2">
+											</div>
+
+					<div class="col-sm-6 col-md-2">
+											</div>
+
+					<div class="col-sm-6 col-md-3">
+											</div>
+				</div>
+			</div>
+			
+			<div class="site-info">
+				<div class="row">
+					<div class="copyright col-sm-8">
+						
+			<div class="footer_subscribe_div">
+							</div>
+					</div>
+					<div class="col-sm-4">
+							<ul class="footer-shares nav list-unstyled">
+		<li class="social reddit"><a href="https://www.reddit.com/r/moviesocial/"><i class="fa fa-reddit"></i></a></li>		<li class="social facebook"><a href="https://www.facebook.com/streamingdigitally"><i class="fa fa-facebook"></i></a></li>		<li class="social twitter"><a href="https://twitter.com/streamdigital_"><i class="fa fa-twitter"></i></a></li>		<li class="social youtube"><a href="https://www.youtube.com/channel/UCsEX6bS1qwbnLddbr54aOLQ"><i class="fa fa-youtube"></i></a></li>		<li class="social linkedin"><a href="https://www.linkedin.com/company/streaming-digitally"><i class="fa fa-linkedin"></i></a></li>	</ul>						</div>
+				</div>
+			</div>
+
+		</div>
+	</footer>
+</div>
+
+<!-- GTM Container placement set to footer -->
+<!-- Google Tag Manager (noscript) -->
+				<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P58HS6Q" height="0" width="0" style="display:none;visibility:hidden" aria-hidden="true"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->	<div class="modal fade" id="dw-gamez-video-modal" tabindex="-1" aria-labelledby="dw-gamez-video-modal">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<div class="video-title"></div>
+					<button type="button" class="pull-right close" style="" data-dismiss="modal" aria-hidden="true">×</button>
+				</div>
+				<div class="modal-body">
+				</div>
+			</div>
+		</div>
+	</div>
+	<script type="rocketlazyloadscript">
+(function() {
+  var supportsPassive = eventListenerOptionsSupported();  
+
+  if (supportsPassive) {
+    var addEvent = EventTarget.prototype.addEventListener;
+    overwriteAddEvent(addEvent);
+  }
+
+  function overwriteAddEvent(superMethod) {
+    var defaultOptions = {
+      passive: true,
+      capture: false
+    };
+
+    EventTarget.prototype.addEventListener = function(type, listener, options) {
+      var usesListenerOptions = typeof options === 'object';
+      var useCapture = usesListenerOptions ? options.capture : options;
+
+      options = usesListenerOptions ? options : {};
+      options.passive = options.passive !== undefined ? options.passive : defaultOptions.passive;
+      options.capture = useCapture !== undefined ? useCapture : defaultOptions.capture;
+
+      superMethod.call(this, type, listener, options);
+    };
+  }
+
+  function eventListenerOptionsSupported() {
+    var supported = false;
+    try {
+      var opts = Object.defineProperty({}, 'passive', {
+        get: function() {
+          supported = true;
+        }
+      });
+      window.addEventListener("test", null, opts);
+    } catch (e) {}
+
+    return supported;
+  }
+})();
+</script>
+<link data-minify="1" rel='stylesheet' id='gglcptch-css'  href='https://www.streamingdigitally.com/wp-content/cache/min/1/wp-content/plugins/google-captcha/css/gglcptch.css?ver=1667207049' type='text/css' media='all' />
+<script data-minify="1" type='text/javascript' src='https://www.streamingdigitally.com/wp-content/cache/min/1/wp-content/plugins/contact-form-7/includes/swv/js/index.js?ver=1667207041' id='swv-js' defer></script>
+<script type='text/javascript' id='contact-form-7-js-extra'>
+/* <![CDATA[ */
+var wpcf7 = {"api":{"root":"https:\/\/www.streamingdigitally.com\/wp-json\/","namespace":"contact-form-7\/v1"},"cached":"1"};
+/* ]]> */
+</script>
+<script data-minify="1" type='text/javascript' src='https://www.streamingdigitally.com/wp-content/cache/min/1/wp-content/plugins/contact-form-7/includes/js/index.js?ver=1667207041' id='contact-form-7-js' defer></script>
+<script type='text/javascript' src='https://www.streamingdigitally.com/wp-content/plugins/faq-schema-block-to-accordion/assets/js/YSFA-JS.min.js?ver=1.0.4' id='YSFA-js-js' defer></script>
+<script type='text/javascript' src='https://www.streamingdigitally.com/wp-content/plugins/wp-carousel-free/public/js/swiper-bundle.min.js?ver=2.5.0' id='wpcf-swiper-js' defer></script>
+<script type='text/javascript' id='wpcf-swiper-config-js-extra'>
+/* <![CDATA[ */
+var sp_wp_carousel_free = {"url":"https:\/\/www.streamingdigitally.com\/wp-content\/plugins\/wp-carousel-free\/","loadScript":"https:\/\/www.streamingdigitally.com\/wp-content\/plugins\/wp-carousel-free\/public\/js\/wp-carousel-free-public.min.js","link":"https:\/\/www.streamingdigitally.com\/wp-admin\/post-new.php?post_type=sp_wp_carousel","shortCodeList":[{"id":288067,"title":"BBC iplayer slider"}]};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://www.streamingdigitally.com/wp-content/plugins/wp-carousel-free/public/js/wp-carousel-free-public.min.js?ver=2.5.0' id='wpcf-swiper-config-js' defer></script>
+<script type='text/javascript' id='rocket-browser-checker-js-after'>
+"use strict";var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||!1,descriptor.configurable=!0,"value"in descriptor&&(descriptor.writable=!0),Object.defineProperty(target,descriptor.key,descriptor)}}return function(Constructor,protoProps,staticProps){return protoProps&&defineProperties(Constructor.prototype,protoProps),staticProps&&defineProperties(Constructor,staticProps),Constructor}}();function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor))throw new TypeError("Cannot call a class as a function")}var RocketBrowserCompatibilityChecker=function(){function RocketBrowserCompatibilityChecker(options){_classCallCheck(this,RocketBrowserCompatibilityChecker),this.passiveSupported=!1,this._checkPassiveOption(this),this.options=!!this.passiveSupported&&options}return _createClass(RocketBrowserCompatibilityChecker,[{key:"_checkPassiveOption",value:function(self){try{var options={get passive(){return!(self.passiveSupported=!0)}};window.addEventListener("test",null,options),window.removeEventListener("test",null,options)}catch(err){self.passiveSupported=!1}}},{key:"initRequestIdleCallback",value:function(){!1 in window&&(window.requestIdleCallback=function(cb){var start=Date.now();return setTimeout(function(){cb({didTimeout:!1,timeRemaining:function(){return Math.max(0,50-(Date.now()-start))}})},1)}),!1 in window&&(window.cancelIdleCallback=function(id){return clearTimeout(id)})}},{key:"isDataSaverModeOn",value:function(){return"connection"in navigator&&!0===navigator.connection.saveData}},{key:"supportsLinkPrefetch",value:function(){var elem=document.createElement("link");return elem.relList&&elem.relList.supports&&elem.relList.supports("prefetch")&&window.IntersectionObserver&&"isIntersecting"in IntersectionObserverEntry.prototype}},{key:"isSlowConnection",value:function(){return"connection"in navigator&&"effectiveType"in navigator.connection&&("2g"===navigator.connection.effectiveType||"slow-2g"===navigator.connection.effectiveType)}}]),RocketBrowserCompatibilityChecker}();
+</script>
+<script type='text/javascript' id='rocket-preload-links-js-extra'>
+/* <![CDATA[ */
+var RocketPreloadLinksConfig = {"excludeUris":"\/(?:.+\/)?feed(?:\/(?:.+\/?)?)?$|\/(?:.+\/)?embed\/|\/(index\\.php\/)?wp\\-json(\/.*|$)|\/refer\/|\/go\/|\/recommend\/|\/recommends\/","usesTrailingSlash":"1","imageExt":"jpg|jpeg|gif|png|tiff|bmp|webp|avif|pdf|doc|docx|xls|xlsx|php","fileExt":"jpg|jpeg|gif|png|tiff|bmp|webp|avif|pdf|doc|docx|xls|xlsx|php|html|htm","siteUrl":"https:\/\/www.streamingdigitally.com","onHoverDelay":"100","rateThrottle":"3"};
+/* ]]> */
+</script>
+<script type='text/javascript' id='rocket-preload-links-js-after'>
+(function() {
+"use strict";var r="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e},e=function(){function i(e,t){for(var n=0;n<t.length;n++){var i=t[n];i.enumerable=i.enumerable||!1,i.configurable=!0,"value"in i&&(i.writable=!0),Object.defineProperty(e,i.key,i)}}return function(e,t,n){return t&&i(e.prototype,t),n&&i(e,n),e}}();function i(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}var t=function(){function n(e,t){i(this,n),this.browser=e,this.config=t,this.options=this.browser.options,this.prefetched=new Set,this.eventTime=null,this.threshold=1111,this.numOnHover=0}return e(n,[{key:"init",value:function(){!this.browser.supportsLinkPrefetch()||this.browser.isDataSaverModeOn()||this.browser.isSlowConnection()||(this.regex={excludeUris:RegExp(this.config.excludeUris,"i"),images:RegExp(".("+this.config.imageExt+")$","i"),fileExt:RegExp(".("+this.config.fileExt+")$","i")},this._initListeners(this))}},{key:"_initListeners",value:function(e){-1<this.config.onHoverDelay&&document.addEventListener("mouseover",e.listener.bind(e),e.listenerOptions),document.addEventListener("mousedown",e.listener.bind(e),e.listenerOptions),document.addEventListener("touchstart",e.listener.bind(e),e.listenerOptions)}},{key:"listener",value:function(e){var t=e.target.closest("a"),n=this._prepareUrl(t);if(null!==n)switch(e.type){case"mousedown":case"touchstart":this._addPrefetchLink(n);break;case"mouseover":this._earlyPrefetch(t,n,"mouseout")}}},{key:"_earlyPrefetch",value:function(t,e,n){var i=this,r=setTimeout(function(){if(r=null,0===i.numOnHover)setTimeout(function(){return i.numOnHover=0},1e3);else if(i.numOnHover>i.config.rateThrottle)return;i.numOnHover++,i._addPrefetchLink(e)},this.config.onHoverDelay);t.addEventListener(n,function e(){t.removeEventListener(n,e,{passive:!0}),null!==r&&(clearTimeout(r),r=null)},{passive:!0})}},{key:"_addPrefetchLink",value:function(i){return this.prefetched.add(i.href),new Promise(function(e,t){var n=document.createElement("link");n.rel="prefetch",n.href=i.href,n.onload=e,n.onerror=t,document.head.appendChild(n)}).catch(function(){})}},{key:"_prepareUrl",value:function(e){if(null===e||"object"!==(void 0===e?"undefined":r(e))||!1 in e||-1===["http:","https:"].indexOf(e.protocol))return null;var t=e.href.substring(0,this.config.siteUrl.length),n=this._getPathname(e.href,t),i={original:e.href,protocol:e.protocol,origin:t,pathname:n,href:t+n};return this._isLinkOk(i)?i:null}},{key:"_getPathname",value:function(e,t){var n=t?e.substring(this.config.siteUrl.length):e;return n.startsWith("/")||(n="/"+n),this._shouldAddTrailingSlash(n)?n+"/":n}},{key:"_shouldAddTrailingSlash",value:function(e){return this.config.usesTrailingSlash&&!e.endsWith("/")&&!this.regex.fileExt.test(e)}},{key:"_isLinkOk",value:function(e){return null!==e&&"object"===(void 0===e?"undefined":r(e))&&(!this.prefetched.has(e.href)&&e.origin===this.config.siteUrl&&-1===e.href.indexOf("?")&&-1===e.href.indexOf("#")&&!this.regex.excludeUris.test(e.href)&&!this.regex.images.test(e.href))}}],[{key:"run",value:function(){"undefined"!=typeof RocketPreloadLinksConfig&&new n(new RocketBrowserCompatibilityChecker({capture:!0,passive:!0}),RocketPreloadLinksConfig).init()}}]),n}();t.run();
+}());
+</script>
+<script type='text/javascript' src='https://www.streamingdigitally.com/wp-includes/js/comment-reply.min.js?ver=6.0.3' id='comment-reply-js' defer></script>
+<script type='text/javascript' id='general_script_js-js-extra'>
+/* <![CDATA[ */
+var general_obj = {"is_mobile":"0"};
+/* ]]> */
+</script>
+<script data-minify="1" type='text/javascript' src='https://www.streamingdigitally.com/wp-content/cache/min/1/wp-content/themes/dw-gamez/assets/js/general_script.js?ver=1667207041' id='general_script_js-js' defer></script>
+<script type='text/javascript' id='q2w3_fixed_widget-js-extra'>
+/* <![CDATA[ */
+var q2w3_sidebar_options = [{"sidebar":"q2w3-default-sidebar","use_sticky_position":true,"margin_top":10,"margin_bottom":0,"stop_elements_selectors":"#sidebar-content-bottom\r\n#colophon","screen_max_width":810,"screen_max_height":1080,"widgets":["#post_banner_fixed"]}];
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://www.streamingdigitally.com/wp-content/plugins/q2w3-fixed-widget/js/frontend.min.js?ver=6.2.0' id='q2w3_fixed_widget-js' defer></script>
+<script data-minify="1" type='text/javascript' src='https://www.streamingdigitally.com/wp-content/cache/min/1/wp-content/plugins/accordion-toggle/assets/js/eb-animation-load.js?ver=1667207041' id='essential-blocks-eb-animation-js' defer></script>
+<script type='text/javascript' src='https://www.streamingdigitally.com/wp-content/plugins/easy-table-of-contents/vendor/smooth-scroll/jquery.smooth-scroll.min.js?ver=2.2.0' id='ez-toc-jquery-smooth-scroll-js' defer></script>
+<script type='text/javascript' src='https://www.streamingdigitally.com/wp-content/plugins/easy-table-of-contents/vendor/js-cookie/js.cookie.min.js?ver=2.2.1' id='ez-toc-js-cookie-js' defer></script>
+<script type='text/javascript' src='https://www.streamingdigitally.com/wp-content/plugins/easy-table-of-contents/vendor/sticky-kit/jquery.sticky-kit.min.js?ver=1.9.2' id='ez-toc-jquery-sticky-kit-js' defer></script>
+<script type='text/javascript' id='ez-toc-js-js-extra'>
+/* <![CDATA[ */
+var ezTOC = {"smooth_scroll":"1","visibility_hide_by_default":"1","width":"auto","scroll_offset":"30"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://www.streamingdigitally.com/wp-content/plugins/easy-table-of-contents/assets/js/front.min.js?ver=2.0.34-1665156923' id='ez-toc-js-js' defer></script>
+<script type='text/javascript' id='gglcptch_pre_api-js-extra'>
+/* <![CDATA[ */
+var gglcptch_pre = {"messages":{"in_progress":"Please wait until Google reCAPTCHA is loaded.","timeout":"Failed to load Google reCAPTCHA. Please check your internet connection and reload this page."},"custom_callback":""};
+/* ]]> */
+</script>
+<script data-minify="1" type='text/javascript' src='https://www.streamingdigitally.com/wp-content/cache/min/1/wp-content/plugins/google-captcha/js/pre-api-script.js?ver=1667207049' id='gglcptch_pre_api-js' defer></script>
+<script type="rocketlazyloadscript" data-rocket-type='text/javascript' data-cfasync="false" async="async" defer="defer" src='https://www.google.com/recaptcha/api.js?onload=gglcptch_onload_callback&#038;render=explicit&#038;ver=1.68' id='gglcptch_api-js'></script>
+<script type='text/javascript' id='gglcptch_script-js-extra'>
+/* <![CDATA[ */
+var gglcptch = {"options":{"version":"v2","sitekey":"6LeVdpIeAAAAAE3fVcQAOjCrgD5HcqtIEGOvpKyz","error":"<strong>Warning<\/strong>:&nbsp;More than one reCAPTCHA has been found in the current form. Please remove all unnecessary reCAPTCHA fields to make it work properly.","disable":0,"theme":"light"},"vars":{"visibility":false}};
+/* ]]> */
+</script>
+<script data-minify="1" type='text/javascript' src='https://www.streamingdigitally.com/wp-content/cache/min/1/wp-content/plugins/google-captcha/js/script.js?ver=1667207049' id='gglcptch_script-js' defer></script>
+</body>
+</html>
+<!--
+Performance optimized by Redis Object Cache. Learn more: https://wprediscache.com
+
+Retrieved 6611 objects (3 MB) from Redis using PhpRedis (v5.3.7).
+-->
+
+<!-- This website is like a Rocket, isn't it? Performance optimized by WP Rocket. Learn more: https://wp-rocket.me - Debug: cached@1667379071 -->
